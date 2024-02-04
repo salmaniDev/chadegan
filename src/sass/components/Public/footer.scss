@@ -1,0 +1,117 @@
+footer {
+    // margin-top: -380px;
+    padding-bottom: 50px;
+    position: relative;
+
+    @include before_bg(#0c6fcc08);
+
+    &::before {
+        height: 79%;
+        top: 0;
+        bottom: auto;
+    }
+
+    .box {
+        width: 815px;
+        margin: 0 auto;
+
+        .quick_access {
+            >.title {
+                font-weight: 100;
+                font-size: 24px;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .items {
+                display: grid;
+                justify-items: start;
+                grid-gap: 20px;
+                grid-template-columns: repeat(2, 1fr);
+                margin-bottom: 45px;
+
+                .link {
+                    background-color: #fff;
+                    justify-content: space-between;
+                    width: 100%;
+                    border: 1px solid $border4;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    padding: 35px 32px;
+                    transition: $transition;
+
+                    &:hover {
+                        border-color: $main2 !important;
+
+                        * {
+                            color: $main2 !important;
+                        }
+                    }
+
+                    &:nth-child(2n) {
+                        .info {
+                            .icon {
+                                margin-left: 28px;
+                                margin-right: 0;
+                            }
+                        }
+                    }
+
+                    >.icon {
+                        color: $desc7;
+                        font-size: 23px;
+                    }
+
+                    .info {
+                        color: $desc7;
+                        display: flex;
+                        align-items: center;
+
+                        .icon {
+                            font-size: 29px;
+                            margin-right: 28px;
+                            transition: $transition;
+                        }
+
+                        .title {
+                            font-size: 24px;
+                            font-weight: 100;
+                            transition: $transition;
+                        }
+                    }
+                }
+            }
+        }
+
+        .certificates {
+            text-align: center;
+            margin-bottom: 100px;
+
+            .link {
+                color: $desc8;
+                font-size: 43px;
+                margin: 0 8px;
+                transition: $transition;
+
+                &:hover {
+                    color: $main2;
+                }
+
+                &:hover {}
+            }
+        }
+
+        .footer_bottom {
+            text-align: center;
+            color: $desc7;
+            font-size: 19px;
+            font-weight: 100;
+
+            .icon {
+                color: $main2;
+                margin: 0 5px;
+            }
+        }
+    }
+}

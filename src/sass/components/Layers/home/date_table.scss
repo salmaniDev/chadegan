@@ -1,0 +1,7 @@
+.date_table {
+    margin-bottom: 150px;
+
+    .box{
+        @include data_table_box;
+    }
+}

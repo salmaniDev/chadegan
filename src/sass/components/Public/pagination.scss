@@ -1,0 +1,93 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    &.sec {
+        li {
+            .link {
+                background-color: #F4F9FD;
+
+                &.arrow {
+                    .icon {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    li {
+        &:not(:last-child) {
+            margin-left: 10px;
+        }
+
+        .link {
+            background-color: #fff;
+            border-radius: 50%;
+            width: 63px;
+            height: 63px;
+            padding: 9px 17px;
+            color: $main2;
+            font-size: 24px;
+            font-weight: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: $transition;
+
+
+
+            &:not(:last-child) {
+                margin-left: 17px;
+            }
+
+            &:not(.arrow) {
+                &:hover {
+                    background-color: $main2;
+                    color: #fff;
+                }
+            }
+
+            &.arrow {
+                width: 149px;
+                border-radius: 41px;
+                color: #000;
+                justify-content: end;
+
+                &:hover {
+                    .icon {
+                        background-color: $main2;
+                        color: #fff;
+                    }
+                }
+
+                &.prev {
+                    padding-left: 8px;
+
+                    .icon {
+                        margin-right: 21px;
+                    }
+                }
+
+                &.next {
+                    padding-right: 8px;
+
+                    .icon {
+                        margin-left: auto;
+                    }
+                }
+
+                .icon {
+                    background-color: #F5F9FD;
+                    color: $main2;
+                    padding: 16px 20px;
+                    border-radius: 50%;
+                    font-size: 18px;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+}

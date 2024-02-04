@@ -1,0 +1,123 @@
+.articles {
+    // padding-bottom: 500px;
+    padding-top: 150px;
+    position: relative;
+    margin-bottom: 100px;
+    @include after_bg;
+
+    .top_articles {
+        margin-bottom: 90px;
+
+        .top_articles_info {
+            .top {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                .icon {
+                    color: $main2;
+                    font-size: 33px;
+                    margin-left: 10px;
+                }
+
+                .wrap {
+                    .title {
+                        font-weight: 300;
+                        font-size: 18px;
+                        margin-bottom: 3px;
+                    }
+
+                    .en {
+                        color: $desc4;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .desc {
+                line-height: 3;
+                color: $desc4;
+                margin-bottom: 15px;
+            }
+
+            .link {
+                @include link_btn($main2, 9px 12px, 11px, 100, 14px);
+                margin-right: auto;
+                display: table;
+
+                .icon {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .item {
+            position: relative;
+
+            .image {
+                mask-image: url('../dist/image/mask/1.svg');
+                mask-size: 100%;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                width: 100%;
+                -webkit-mask-repeat: no-repeat;
+                height: 486px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .info {
+                position: absolute;
+                bottom: 40px;
+                left: 0;
+                text-align: center;
+                width: 200px;
+                z-index: 2;
+
+                .title {
+                    font-size: 15px;
+                    margin-bottom: 12px;
+                    @include line_clamp(1)
+                }
+
+                .desc {
+                    color: $border2;
+                    line-height: 1.8;
+                    font-size: 14px;
+                    margin: 0 auto;
+                    margin-bottom: 18px;
+                    @include line_clamp(2);
+                    width: 90%;
+                    font-weight: 300;
+                }
+
+                .link {
+                    color: $desc4;
+                    margin-right: auto;
+                    display: table;
+                    font-size: 14px;
+
+                    .icon {
+                        font-size: 21px;
+                        margin-right: 2px;
+                    }
+                }
+            }
+
+            .star {
+                position: absolute;
+                left: -40px;
+                bottom: -45px;
+                width: 95px;
+            }
+        }
+    }
+
+    .articles_lists {
+        .item {
+            @include blog_item;
+        }
+    }
+}

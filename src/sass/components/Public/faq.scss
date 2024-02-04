@@ -1,0 +1,58 @@
+.faq {
+    margin-bottom: 100px;
+
+    .faq_info {
+        text-align: center;
+
+        >.title {
+            color: $main2;
+            font-weight: 200;
+            font-size: 28px;
+            margin-bottom: 25px;
+
+            .icon {
+                font-size: 20px;
+                transform: translateX(-20px);
+                display: inline-block;
+            }
+        }
+
+        >.desc {
+            color: $desc5;
+            font-size: 29px;
+        }
+
+        .bottom_action {
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .icon {
+                color: $main;
+                font-size: 48px;
+                margin-left: 5px;
+            }
+
+            .info {
+                p {
+                    &.title {
+                        font-size: 20px;
+                        font-weight: 200;
+                    }
+
+                    &.en {
+                        color: $desc4;
+                        font-size: 19px
+                    }
+                }
+            }
+        }
+    }
+
+    .faq_items {
+        .item {
+            @include faq_item;
+        }
+    }
+}
