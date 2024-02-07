@@ -1,7 +1,13 @@
 .date_table {
     margin-bottom: 150px;
 
-    .box{
+    .box {
         @include data_table_box;
+    }
+
+    @media screen and (max-width:1719px) {
+        .box{
+            width:90%;
+        }
     }
 }

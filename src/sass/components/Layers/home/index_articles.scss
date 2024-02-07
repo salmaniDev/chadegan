@@ -1,0 +1,17 @@
+.index_articles {
+    // padding-bottom: 500px;
+    padding-top: 150px;
+    position: relative;
+    margin-bottom: 150px;
+    @include after_bg;
+
+    .top_articles{
+        @include top_articles;
+    }
+
+    .articles_lists {
+        .item {
+            @include blog_item;
+        }
+    }
+}

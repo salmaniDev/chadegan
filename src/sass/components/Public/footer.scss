@@ -28,7 +28,7 @@ footer {
                 justify-items: start;
                 grid-gap: 20px;
                 grid-template-columns: repeat(2, 1fr);
-                margin-bottom: 45px;
+                margin-bottom: 60px;
 
                 .link {
                     background-color: #fff;
@@ -38,7 +38,7 @@ footer {
                     border-radius: 12px;
                     display: flex;
                     align-items: center;
-                    padding: 35px 32px;
+                    padding: 35px 25px;
                     transition: $transition;
 
                     &:hover {
@@ -60,7 +60,7 @@ footer {
 
                     >.icon {
                         color: $desc7;
-                        font-size: 23px;
+                        font-size: 35px;
                     }
 
                     .info {

@@ -1,6 +1,6 @@
 .stories {
     position: relative;
-    padding-bottom: 450px;
+    padding-bottom: 525px;
     padding-left: 146px;
 
     .stars {
@@ -118,7 +118,8 @@
         transform: translateY(120px);
         position: relative;
         z-index: 5;
-        width: 620px;
+        flex: 0 0 auto;
+        width: 38.333333%;
         margin-right: auto;
 
         .title {
@@ -178,18 +179,18 @@
 
     .scroll_action {
         position: absolute;
-        bottom: 110px;
-        right: 100px;
+        bottom: 115px;
+        right: 140px;
 
         .icon {
             color: $desc2;
             margin-left: 15px;
-            font-size: 26px;
+            font-size: 34px;
         }
 
         .link {
             color: $main;
-            font-size: 15px;
+            font-size: 19px;
         }
     }
 }

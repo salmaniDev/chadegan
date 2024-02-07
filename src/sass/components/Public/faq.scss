@@ -11,7 +11,7 @@
             margin-bottom: 25px;
 
             .icon {
-                font-size: 20px;
+                font-size: 35px;
                 transform: translateX(-20px);
                 display: inline-block;
             }
@@ -20,6 +20,10 @@
         >.desc {
             color: $desc5;
             font-size: 29px;
+
+            &:first-child {
+                margin-bottom: 20px;
+            }
         }
 
         .bottom_action {
@@ -31,14 +35,14 @@
             .icon {
                 color: $main;
                 font-size: 48px;
-                margin-left: 5px;
+                margin-left: 10px;
             }
 
             .info {
                 p {
                     &.title {
                         font-size: 20px;
-                        font-weight: 200;
+                        font-weight: 300;
                     }
 
                     &.en {

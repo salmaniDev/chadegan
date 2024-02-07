@@ -1,0 +1,16 @@
+.product_list_articles {
+    padding-top: 100px;
+    position: relative;
+    margin-bottom: 150px;
+    @include after_bg;
+
+    .top_articles{
+        @include top_articles;
+    }
+
+    .articles_lists {
+        .item {
+            @include blog_item;
+        }
+    }
+}
