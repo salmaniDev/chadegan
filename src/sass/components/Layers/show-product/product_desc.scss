@@ -1,0 +1,206 @@
+.product_desc {
+    margin-bottom: 150px;
+
+    .product_desc_info {
+        >.title {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        >.desc {
+            color: $desc10;
+            font-size: 15px;
+            line-height: 4;
+            margin-bottom: 30px;
+        }
+
+        .details_title {
+            font-size: 23px;
+            font-weight: 200;
+            margin-bottom: 35px;
+        }
+
+        .product_details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-row-gap: 40px;
+            width: 90%;
+
+            .item {
+                color: $desc9;
+
+                &.active {
+                    color: $main2;
+                }
+
+                .icon {
+                    font-size: 28px;
+                    margin-left: 18px;
+                    display: inline-block;
+                }
+
+                .title {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .product_payment {
+        position: sticky;
+        top: 140px;
+
+        >.info {
+            padding: 25px;
+            padding-right: 75px;
+            background-image: url('../dist/image/mask/2.svg');
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            position: relative;
+
+            .stars {
+                position: absolute;
+                bottom: -45px;
+                right: -60px;
+                z-index: 2;
+                left: 37rem;
+                transform: rotate(270deg);
+                width: 95px;
+            }
+
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 35px;
+                right: 0;
+                width: 350px;
+                height: 350px;
+                background: linear-gradient(223deg, #1c6ecc71, transparent);
+                filter: blur(146px);
+                z-index: -2;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -39px;
+                left: 0;
+                width: 350px;
+                height: 350px;
+                background: linear-gradient(223deg, #fac1047d, transparent);
+                filter: blur(146px);
+                z-index: -2;
+            }
+
+            .top {
+                background-color: $light_bg;
+                border-radius: 12px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 15px;
+                margin-bottom: 50px;
+
+                p {
+                    font-size: 18px;
+
+                    &.title {}
+
+                    &.price {
+                        color: $main2;
+
+                        span {
+                            color: $desc4
+                        }
+                    }
+                }
+            }
+
+            .day_info {
+                @include day_info;
+                border: 1px solid $border7;
+                border-radius: 12px;
+                margin-bottom: 50px;
+
+                .item {
+                    padding: 10px 16px;
+
+                    .icon {
+                        margin-left: 31px;
+                    }
+                }
+            }
+
+            .people_num {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 50px;
+
+                .title {
+                    font-size: 22px;
+                }
+
+                .left {
+                    margin-right: 29px;
+
+                    .icon {
+                        color: $main2;
+                        font-size: 30px;
+                    }
+
+                    .num {
+                        display: inline-block;
+                        font-size: 22px;
+                        margin: 0 20px;
+                    }
+                }
+            }
+
+            .bottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .price {
+                    color: $main;
+                    font-size: 35px;
+
+                    span {
+                        color: $desc4;
+                        font-size: 17px;
+                    }
+                }
+
+                .link {
+                    @include link_btn($main2);
+
+                    .icon {
+                        margin-right: 35px;
+                    }
+                }
+            }
+
+            >.calendar {
+                position: absolute;
+                top: 4px;
+                right: 15px;
+                color: $main2;
+                font-size: 24px;
+            }
+
+            >.line {
+                position: absolute;
+                right: 20px;
+                bottom: 50%;
+                transform: translateY(50%);
+                width: 15px;
+            }
+        }
+    }
+}

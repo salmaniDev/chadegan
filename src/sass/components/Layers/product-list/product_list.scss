@@ -229,8 +229,15 @@
             width: 100%;
 
             .image {
+                mask-image: url('../image/mask/14.svg');
+                mask-size: 100%;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
                 width: 100%;
-                object-fit: cover;
+                -webkit-mask-repeat: no-repeat;
+                position: relative;
+                z-index: 1;
                 height: 100%;
                 border-radius: 15px;
             }
@@ -244,6 +251,7 @@
                 width: 90%;
                 border-radius: 10px;
                 padding: 10px;
+                z-index: 1;
 
                 .top {
                     display: flex;
@@ -278,6 +286,24 @@
                     .item {
                         padding-top: 15px;
                     }
+                }
+            }
+
+            >.action {
+                position: absolute;
+                top: 0;
+                right: 20px;
+                text-align: center;
+
+                .icon {
+                    display: block;
+                    color: $yellow;
+                    font-size: 27px;
+                }
+
+                .title {
+                    font-size: 19px;
+                    font-weight: 100;
                 }
             }
         }

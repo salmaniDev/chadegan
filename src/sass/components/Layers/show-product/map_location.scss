@@ -1,0 +1,65 @@
+.map_location {
+    margin-bottom: 150px;
+
+    .map_title {
+        text-align: center;
+        font-weight: 200;
+        font-size: 23px;
+        margin-bottom: 30px;
+
+        .icon {
+            color: $main2;
+            font-size: 24px;
+            margin-left: 2px;
+        }
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .actions {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 35px;
+        margin-top: 50px;
+        grid-gap: 80px;
+
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            .right {
+                display: flex;
+                align-items: center;
+
+                .icon {
+                    color: $main2;
+                    font-size: 35px;
+                }
+
+                .info {
+                    margin-right: 15px;
+
+                    p {
+                        &.desc {
+                            font-size: 18px;
+                        }
+
+                        &.title {
+                            color: $main2;
+                            font-weight: 200;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+
+            >.icon {
+                color: $desc4;
+            }
+        }
+    }
+}
