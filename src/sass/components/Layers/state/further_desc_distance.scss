@@ -1,0 +1,178 @@
+.further_desc_distance {
+    margin-bottom: 200px;
+
+    .distance_box {
+        position: sticky;
+        top: 130px;
+        margin-top: -115px;
+
+        .info {
+            background-color: #fff;
+            border-radius: 12px;
+            position: relative;
+            padding: 25px;
+            padding-bottom: 40px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 200px;
+                height: 250px;
+                background: linear-gradient(223deg, #fac104a1, transparent);
+                -webkit-filter: blur(146px);
+                filter: blur(100px);
+                z-index: -2;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 85px;
+                left: 0;
+                width: 200px;
+                height: 250px;
+                background: linear-gradient(223deg, #1c6ecc69, transparent);
+                -webkit-filter: blur(146px);
+                filter: blur(100px);
+                z-index: -2;
+            }
+
+            .tabs {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                text-align: center;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid $border3;
+
+                li {
+                    color: $desc4;
+                    transition: $transition;
+                    cursor: pointer;
+
+                    &.active,
+                    &:hover {
+                        color: $main2;
+                    }
+
+                    .icon {
+                        font-size: 28px;
+                        margin-bottom: 8px;
+                        display: block;
+                    }
+
+                    .title {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .contens {
+                .item {
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+
+                    .top {
+                        margin-bottom: 30px;
+                        text-align: center;
+
+                        .num {
+                            font-size: 45px;
+                            color: $main;
+                        }
+
+                        .title {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .info {
+                        margin-bottom: 70px;
+
+                        li {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            &:not(:last-child) {
+                                padding-bottom: 30px;
+                            }
+
+                            .rigth {
+                                display: flex;
+                                align-items: center;
+
+                                .dot {
+                                    @include dot($main2);
+                                    width: 13px;
+                                    height: 13px;
+                                    border: 2px solid $main2;
+                                    margin-left: 8px;
+                                }
+
+                                .square {
+                                    @include square($main)
+                                }
+
+                                .title {
+                                    font-size: 13px;
+                                    font-weight: 200;
+                                }
+                            }
+
+                            .interval {
+                                color: $main2;
+                                font-size: 17px;
+                            }
+                        }
+                    }
+
+                    .link {
+                        @include link_btn($main2);
+                        margin-right: auto;
+                        display: table;
+                    }
+                }
+            }
+        }
+    }
+
+    .distance_info {
+        .map {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .top {
+            background-color: $light_bg3;
+            border-radius: 12px;
+            padding: 25px 20px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .title {}
+
+            .link {
+                color: $main2;
+
+                .icon {
+                    margin-right: 5px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .desc {
+            color: $desc2;
+            line-height: 3.7;
+        }
+    }
+}

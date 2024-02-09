@@ -348,7 +348,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
 
     .item {
         display: flex;
@@ -408,9 +407,11 @@
 
 @mixin range_value($width) {
     width: $width;
-    height: 5px;
+    height: 7px;
     background-color: $border7;
     border-radius: 10px;
+    flex: 1;
+    margin-left: 30px;
 
     div {
         background-color: $main;
@@ -441,13 +442,13 @@
 
                 .user_image {
                     margin-left: 15px;
+                    width: 55px;
                 }
 
                 .info {
                     .title {
                         color: #8B8B8B;
                         font-weight: 100;
-                        font-size: 14px;
                         margin-bottom: 10px;
                     }
 
@@ -457,7 +458,7 @@
 
                         .icon {
                             color: #0C6FCC;
-                            font-size: 14px;
+                            font-size: 15px;
                             margin-left: 20px;
 
                             i {
@@ -467,7 +468,7 @@
 
                         .desc {
                             color: #B9B9B9;
-                            font-size: 12px;
+                            font-size: 13px;
                         }
                     }
                 }
@@ -482,14 +483,14 @@
 
                     .icon {
                         color: #FFBF00;
-                        font-size: 12px;
+                        font-size: 14px;
                         margin: 0 1px;
                     }
                 }
 
                 .desc {
                     color: #B9B9B9;
-                    font-size: 10px;
+                    font-size: 12px;
                 }
             }
         }
@@ -500,21 +501,20 @@
     }
 
     >.desc {
-        font-size: 15px;
-        line-height: 2;
-        font-weight: 200;
+        font-size: 19px;
+        line-height: 49px;
     }
 
     .images {
-        display: flex;
-        justify-content: space-between;
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
         margin-top: 40px;
         gap: 15px;
 
         img {
             border-radius: 12px;
             object-fit: cover;
-            height: 120px;
+            height: 150px;
             width: 100%;
         }
     }
@@ -1031,7 +1031,6 @@
             font-weight: 100;
 
             &.title {
-                color: $main2;
             }
 
             &.time_line {}
@@ -1106,7 +1105,7 @@
         position: relative;
 
         .image {
-            mask-image: url('../dist/image/mask/1.svg');
+            mask-image: url('../image/mask/1.svg');
             mask-size: 100%;
             background-size: cover;
             background-position: center;

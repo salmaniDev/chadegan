@@ -1,0 +1,11 @@
+.weater_list_articles {
+    padding-top: 100px;
+    position: relative;
+    margin-bottom: 150px;
+
+    .articles_lists {
+        .item {
+            @include blog_item;
+        }
+    }
+}

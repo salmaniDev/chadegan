@@ -1,0 +1,244 @@
+.distance_hero {
+    margin-top: 110px;
+    position: relative;
+    margin-bottom: 70px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 50%;
+        width: 95%;
+        height: 100%;
+        background-image: url('../dist/image/mask/9.svg');
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+        transform: translateX(50%);
+        z-index: -1;
+    }
+
+
+    .destination_distance {
+        transform: translateX(45px);
+
+        .top_title {
+            color: $desc2;
+            font-size: 12px;
+            margin-bottom: 25px;
+            font-weight: 100;
+        }
+
+        .link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .item {
+                @include distance_item;
+
+                &:last-child {
+                    width: 60%;
+                }
+            }
+        }
+    }
+
+    .select_origin {
+        font-size: 14px;
+        font-weight: 200;
+        margin-bottom: 80px;
+        padding-top: 25px;
+        position: relative;
+        z-index: 4;
+
+        >.title {
+            font-size: 14px;
+            margin-bottom: 15px;
+            font-weight: 200;
+        }
+
+        .bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .box {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+
+                li {
+                    background-color: #fff;
+                    padding: 10px 14px;
+                    border-radius: 7px;
+                    transition: all 0.2s;
+                    min-width: 85px;
+                    text-align: center;
+                    cursor: pointer;
+
+                    &:hover,
+                    &.active {
+                        background-color: $main ;
+                        color: #fff;
+
+                        .dot {
+                            border-color: #fff;
+
+                            &::after {
+                                background-color: #fff;
+                            }
+                        }
+                    }
+
+                    .dot {
+                       @include dot($desc4);
+                    }
+
+                    .desc {
+                        display: inline-block;
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .link {
+                @include link_btn($main2);
+            }
+        }
+    }
+
+    .distance_image {
+        position: relative;
+        z-index: 2;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 250px;
+            background: linear-gradient(223deg, #1c6ecc66, transparent);
+            -webkit-filter: blur(146px);
+            filter: blur(100px);
+            z-index: -2;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 50%;
+            width: 150px;
+            height: 350px;
+            background: linear-gradient(223deg, #fac104, transparent);
+            -webkit-filter: blur(146px);
+            filter: blur(146px);
+            z-index: -2;
+            transform: translateX(50%);
+        }
+
+        .image {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            mask-image: url('../dist/image/mask/8.svg');
+            mask-size: 100%;
+            -webkit-mask-repeat: no-repeat;
+            width: 100%;
+            height: 646px;
+            mix-blend-mode: multiply;
+        }
+
+        .photographer {
+            position: absolute;
+            bottom: 75px;
+            right: -35px;
+            font-size: 18px;
+            transform: rotate(270deg);
+
+            .icon {
+                font-size: 15px;
+                margin-right: 3px;
+            }
+        }
+
+        .share {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 16px 20px;
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            font-size: 22px;
+
+            .icon {
+                color: $main2;
+            }
+        }
+
+        .info {
+            position: absolute;
+            left: 100px;
+            bottom: 2px;
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 15px;
+
+            .icon {
+                color: $main;
+                font-size: 28px;
+            }
+
+            .title {
+                text-align: right;
+                line-height: 2;
+                margin-bottom: 5px;
+                font-weight: 200;
+                font-size: 15px;
+            }
+
+            .sub_title {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .distance_desc {
+        padding-top: 30px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -30px;
+            left: 0;
+            width: 200px;
+            height: 250px;
+            background: linear-gradient(223deg, #1c6ecc69, transparent);
+            -webkit-filter: blur(146px);
+            filter: blur(100px);
+            z-index: -2;
+        }
+
+        .title {
+            font-size: 21px;
+            margin-bottom: 10px;
+            font-weight: 200;
+        }
+
+        .desc {
+            font-size: 16px;
+            color: $desc2;
+            line-height: 3.7;
+            margin-bottom: 40px;
+        }
+
+        .link {
+            @include link_btn($main2)
+        }
+    }
+}

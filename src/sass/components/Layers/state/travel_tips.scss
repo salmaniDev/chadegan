@@ -1,0 +1,207 @@
+.travel_tips {
+    margin-bottom: 200px;
+
+    .tips_desc {
+        .title {
+            font-size: 20px;
+        }
+
+        .desc {
+            line-height: 3.7;
+        }
+    }
+
+    .route_comparison {
+        position: sticky;
+        top: 110px;
+
+        .info_box {
+            background-image: url('../dist/image/mask/10.svg');
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            position: relative;
+            padding: 25px 0;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100%;
+                background: linear-gradient(90deg, #fac10466, transparent);
+                -webkit-filter: blur(100px);
+                filter: blur(100px);
+                z-index: -2;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 85px;
+                right: 0;
+                width: 300px;
+                height: 100%;
+                background: linear-gradient(223deg, #1c6ecc26, transparent);
+                -webkit-filter: blur(146px);
+                filter: blur(90px);
+                z-index: -2;
+            }
+
+            .top {
+                display: flex;
+                align-items: center;
+                width: max-content;
+                margin: 0 auto;
+                margin-bottom: 50px;
+                padding: 10px 5px;
+                position: relative;
+                transform: translateX(-40px);
+
+                &::before {
+                    content: "";
+                    background-color: #fff;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: -1;
+                    border-radius: 45px;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 25px;
+                    right: 50%;
+                    width: 240px;
+                    height: 50px;
+                    background: linear-gradient(180deg, #1c6ecc57, transparent);
+                    -webkit-filter: blur(50px);
+                    filter: blur(50px);
+                    z-index: -2;
+                    transform: translateX(50%);
+                }
+
+                .item {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 10px;
+
+                    &:nth-child(1) {
+                        .info {
+                            .num {
+                                color: $main;
+                            }
+                        }
+
+                        .icon {
+                            color: $main;
+                            margin-right: 15px;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        .info {
+                            .num {
+                                color: $main2;
+                            }
+                        }
+
+                        .icon {
+                            color: $main2;
+                            margin-left: 15px;
+                        }
+                    }
+
+                    .info {
+                        .num {
+                            font-size: 20px;
+                            line-height: 0.7;
+                        }
+
+                        .desc {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .icon {
+                        font-size: 45px;
+                    }
+                }
+
+                .star {
+                    position: absolute;
+                    top: -13px;
+                    right: 50%;
+                    transform: translateX(50%);
+                    width: 330px;
+                }
+
+            }
+
+            .box {
+                padding-right: 35px;
+                padding-left: 115px;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-bottom: 40px;
+                    position: relative;
+
+                    &:not(:last-child) {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: 19px;
+                            right: 24px;
+                            width: 20px;
+                            border-top: 1px dashed #707070;
+                            transform: rotate(90deg);
+                            height: 5px;
+                        }
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+
+                    .location {
+                        color: $main2;
+                        text-align: center;
+                        width: 65px;
+
+                        .icon {
+                            font-size: 25px;
+                            margin-bottom: 5px;
+                            display: block;
+                        }
+
+                        .title {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .num {
+                        font-size: 35px;
+                    }
+                }
+            }
+
+            >.link{
+                color: $yellow;
+                position: absolute;
+                top: 25px;
+                right: 35px;
+                font-size: 33px;
+            }
+        }
+    }
+}

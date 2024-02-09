@@ -1,0 +1,179 @@
+.climatic_condition {
+    margin-block: 200px;
+
+    .condition_image {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 265px;
+            background: linear-gradient(223deg, #fac104bf, transparent);
+            -webkit-filter: blur(146px);
+            filter: blur(100px);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 300px;
+            background: linear-gradient(223deg, rgb(28 110 204 / 52%), transparent);
+            filter: blur(115px);
+            z-index: -2;
+        }
+
+        .bg {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 783px;
+            -webkit-mask-size: 100%;
+            mask-image: url('../image/mask/11.svg');
+            -webkit-mask-repeat: no-repeat
+        }
+
+        .date {
+            position: absolute;
+            top: 45px;
+            right: 30px;
+            text-align: center;
+
+            .num {
+                color: $main2;
+                font-size: 39px;
+                font-weight: 300;
+                line-height: 35px;
+            }
+
+            .desc {
+                color: #515151;
+                font-size: 29px;
+                font-weight: 100;
+            }
+        }
+
+        .photographer {
+            position: absolute;
+            bottom: 17px;
+            background-color: #fff;
+            right: 20px;
+            border-radius: 12px;
+            padding: 12px 15px;
+
+            .top {
+                margin-bottom: 15px;
+                text-align: center;
+
+                .title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-weight: 200;
+                    font-size: 14px;
+                    margin-bottom: 3px;
+
+                    .icon {
+                        color: $main2;
+                    }
+                }
+
+                .en {
+                    color: $desc4;
+                    font-size: 12px;
+                }
+            }
+
+            .bottom {
+                display: flex;
+                align-items: center;
+
+                .user {
+                    width: 30px;
+                    border-radius: 50%;
+                }
+
+                .info {
+                    margin-right: 14px;
+
+                    p {
+                        font-size: 10px;
+                        text-align: left;
+
+                        &.name {
+                            margin-bottom: 2px;
+                        }
+
+                        &.id {
+                            color: $desc4;
+                        }
+                    }
+                }
+            }
+        }
+
+        .star {
+            position: absolute;
+            transform: rotate(270deg);
+            width: 95px;
+            bottom: -40px;
+            right: -70px;
+            z-index: -1;
+        }
+
+        .star2 {
+            position: absolute;
+            top: 30px;
+            left: 80px;
+            width: 70px;
+        }
+    }
+
+    .condition_info {
+        .weather_conditions {
+            margin-bottom: 50px;
+
+            .top_title {
+                font-size: 13px;
+                color: #8B8B8B;
+                margin-bottom: 20px;
+                font-weight: 200;
+            }
+
+            .link {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .item {
+                    @include weather_item;
+                }
+            }
+        }
+
+        .title {
+            font-size: 64px;
+            font-weight: 200;
+            margin-bottom: 50px;
+
+            p {
+                font-weight: 400;
+                color: $main2;
+                font-size: 80px;
+                margin-top: 15px;
+            }
+        }
+
+        >.link {
+            @include link_btn($main, 12px 14px , 21px , 100 , 19px);
+            display: table;
+            margin-right: auto;
+        }
+    }
+}
