@@ -1,0 +1,49 @@
+.aboutus_hero {
+    margin-top: 142px;
+    position: relative;
+    margin-inline: 50px;
+
+    .card {
+        position: relative;
+        .image {
+            mask-image: url('../image/mask/12.svg');
+            mask-repeat: no-repeat;
+            mask-size: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 708px;
+            width: 100%;
+            background-position: center center;
+        }
+
+        .info {
+            position: absolute;
+            left: -14px;
+            top: 23.2rem;
+
+            .title {
+                font-size: 38px;
+                color: $main2;
+                margin-bottom: 7px;
+            }
+
+            .subtitle {
+                font-size: 37px;
+                font-weight: 400;
+            }
+        }
+
+        .certificates {
+            position: absolute;
+            bottom: 35px;
+            left: 35px;
+
+            .icon {
+                color: rgb(255, 255, 255);
+                font-size: 42px;
+                margin-right: 20px;
+            }
+        }
+    }
+
+}

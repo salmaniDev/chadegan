@@ -1,0 +1,158 @@
+.faq_page {
+    @include after_bg;
+    margin-top: 142px;
+    padding-top: 70px;
+    margin-bottom: 250px;
+
+    .faq_head {
+        margin-bottom: 70px;
+        position: relative;
+
+        .star {
+            &:first-child {
+                position: absolute;
+                bottom: -37px;
+                right: -60px;
+                width: 90px;
+                transform: rotate(-90deg);
+            }
+
+            &:last-child {
+                position: absolute;
+                left: -16px;
+                bottom: 32px;
+                width: 55px;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 180px;
+            background: linear-gradient(223deg, #1c6ecc38, transparent);
+            -webkit-filter: blur(146px);
+            filter: blur(100px);
+            z-index: 1;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -35px;
+            left: -145px;
+            width: 400px;
+            height: 80px;
+            background: linear-gradient(223deg, #fac104a3, transparent);
+            -webkit-filter: blur(146px);
+            filter: blur(100px);
+            z-index: 1;
+        }
+
+        >.title {
+            font-weight: 200;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 21px;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 7px;
+            position: relative;
+            z-index: 2;
+
+            >.icon {
+                margin: 0 21px;
+
+                i {
+                    color: $main2;
+                    font-size: 25px;
+                }
+            }
+
+            .input_box {
+                flex: 1;
+                margin-bottom: 0;
+
+                &::before {
+                    @include before_line(85%, 'right')
+                }
+
+                input{
+                    font-size: 20px;
+                }
+            }
+
+            .link {
+                background-color: $light_bg3;
+                border-radius: 10px;
+                padding: 16px;
+                font-size: 19px;
+
+                .icon {
+                    margin-left: 5px;
+                    color: $main;
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+
+    .faq_sidebar {
+        padding-top: 20px;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            color: $desc2;
+            cursor: pointer;
+
+            &.active {
+                color: $main2;
+            }
+
+            .title {
+                font-size: 22px;
+                font-weight: 100;
+            }
+
+            .icon {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .main_items {
+        position: relative;
+        .faq_items {
+            visibility: hidden;
+            opacity: 0;
+            background-color: #fff;
+            padding: 12px;
+            border-radius: 12px;
+            max-height: 400px;
+            overflow: auto;
+            position: absolute;
+
+            @include scroll_bar;
+
+            &.active {
+                visibility: visible;
+                opacity: 1;
+                z-index: 2;
+            }
+
+            .item {
+                @include faq_item;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.archive_articles {
+    padding-top: 80px;
+    margin-top: 142px;
+    position: relative;
+    margin-bottom: 150px;
+    @include after_bg;
+
+    .top_articles{
+        @include top_articles;
+    }
+
+    .articles_lists {
+        .item {
+            @include blog_item;
+        }
+    }
+}

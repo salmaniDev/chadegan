@@ -1,0 +1,40 @@
+.terms_page {
+    margin-top: 150px;
+    margin-bottom: 80px;
+
+    .terms_banner {
+        position: relative;
+        margin-bottom: 80px;
+
+        .image {
+            mask-image: url('../image/mask/4.svg');
+            mask-size: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 519px;
+            mask-repeat: no-repeat;
+        }
+
+        .photographer {
+            position: absolute;
+            bottom: -5px;
+            right: 120px;
+            font-size: 22px;
+
+            .icon {
+                font-size: 16px;
+                margin-right: 3px;
+            }
+        }
+    }
+
+    .terms_head {
+        @include terms_head;
+    }
+
+    .terms_content {
+     @include terms_content;
+    }
+}

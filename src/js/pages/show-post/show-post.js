@@ -1,0 +1,1 @@
+import '../../../sass/components/Layers/show-post/main.scss'

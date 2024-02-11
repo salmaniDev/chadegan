@@ -1,0 +1,60 @@
+.contactus_hero {
+    position: relative;
+    margin-top: 142px;
+    padding-top: 230px;
+    padding-right: 98px;
+    @include after_bg;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -90px;
+        right: 176px;
+        height: 100%;
+        width: 56%;
+        background: linear-gradient(223deg, #1c6ecc42, transparent);
+        -webkit-filter: blur(146px);
+        filter: blur(100px);
+        z-index: -2;
+    }
+
+    .right_box {
+        display: flex;
+
+        .map {
+            width: 505px;
+            margin-left: 23px;
+            position: relative;
+
+            .link {
+                background-color: #EDF8F3;
+                color: $main;
+                border-radius: 16px;
+                padding: 16px 56px;
+                font-size: 20px;
+                position: absolute;
+                bottom: 10px;
+                left: -6px;
+                font-weight: 300;
+
+                .icon {
+                    font-size: 26px;
+                    margin-left: 4px;
+                }
+            }
+        }
+
+        .card_info {
+            width: 475px;
+            @include contact_box;
+        }
+    }
+
+    .main_image {
+        mix-blend-mode: multiply;
+        position: absolute;
+        left: 160px;
+        top: 50px;
+        width: 30%;
+    }
+}

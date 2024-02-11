@@ -1,0 +1,7 @@
+.comments_holder{
+    position: relative;
+    padding-top: 100px;
+    margin-bottom: 100px;
+
+        @include after_bg;
+}

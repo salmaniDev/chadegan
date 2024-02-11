@@ -1,0 +1,14 @@
+@import '/src/sass/base/mixin.scss';
+@import '/src/sass/base/setting.scss';
+
+@import './archive_articles.scss';
+
+.articles {
+    padding-top: 60px;
+    margin-top: 95px;
+    margin-bottom: 80px;
+}
+
+.pagination {
+    margin-top: 70px;
+}

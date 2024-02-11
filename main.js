@@ -10,3 +10,4 @@ import './src/sass/components/Public/main.scss'
 
 import './src/js/base/navbar'
 import './src/js/base/faq'
+import './src/js/base/tabbar'

@@ -40,11 +40,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('/fonts/icomoon.eot?remsqf');
-  src:  url('/fonts/icomoon.eot?remsqf#iefix') format('embedded-opentype'),
-    url('/fonts/icomoon.ttf?remsqf') format('truetype'),
-    url('/fonts/icomoon.woff?remsqf') format('woff'),
-    url('/fonts/icomoon.svg?remsqf#icomoon') format('svg');
+  src:  url('/fonts/icomoon.eot?pv07nn');
+  src:  url('/fonts/icomoon.eot?pv07nn#iefix') format('embedded-opentype'),
+    url('/fonts/icomoon.ttf?pv07nn') format('truetype'),
+    url('/fonts/icomoon.woff?pv07nn') format('woff'),
+    url('/fonts/icomoon.svg?pv07nn#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -65,9 +65,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-heart2:before {
-  content: "\e905";
-}
 .icon-marker:before {
   content: "\e900";
 }
@@ -82,6 +79,9 @@
 }
 .icon-basketball:before {
   content: "\e904";
+}
+.icon-heart2:before {
+  content: "\e905";
 }
 .icon-call:before {
   content: "\e907";
@@ -153,7 +153,7 @@
   content: "\e91f";
 }
 .icon-Calendar:before {
-  content: "\e920"; 
+  content: "\e920";
 }
 .icon-Celcius-Temperature:before {
   content: "\e921";
@@ -167,17 +167,29 @@
 .icon-Cloudy-rainy2:before {
   content: "\e924";
 }
-.icon-Camera:before { 
+.icon-Camera:before {
   content: "\e925";
+}
+.icon-arrow-up:before {
+  content: "\e926";
 }
 .icon-arrow-up1:before {
   content: "\e927";
 }
+.icon-arrow-right:before {
+  content: "\e928";
+}
 .icon-coat-hanger:before {
   content: "\e929";
 }
+.icon-arrow-down:before {
+  content: "\e92a";
+}
 .icon-arrow-right1:before {
   content: "\e92b";
+}
+.icon-arrow-left:before {
+  content: "\e92c";
 }
 .icon-coat-hanger2:before {
   content: "\e92d";
@@ -428,15 +440,6 @@
 .icon-Shield:before {
   content: "\1f32b";
 }
-.icon-arrow-up:before {
-  content: "\e926";
-}
-.icon-arrow-right:before {
-  content: "\e928";
-}
-.icon-arrow-down:before {
-  content: "\e92a";
-}
-.icon-arrow-left:before {
-  content: "\e92c";
+.icon-share:before {
+  content: "\ea7d";
 }

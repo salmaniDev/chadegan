@@ -44,7 +44,7 @@
                 align-items: center;
                 justify-content: space-between;
                 text-align: center;
-                padding-bottom: 20px;
+                padding-bottom: 25px;
                 margin-bottom: 20px;
                 border-bottom: 1px solid $border3;
 
@@ -59,13 +59,13 @@
                     }
 
                     .icon {
-                        font-size: 28px;
-                        margin-bottom: 8px;
+                        font-size: 35px;
+                        margin-bottom: 10px;
                         display: block;
                     }
 
                     .title {
-                        font-size: 15px;
+                        font-size: 19px;
                     }
                 }
             }
@@ -83,12 +83,12 @@
                         text-align: center;
 
                         .num {
-                            font-size: 45px;
+                            font-size: 54px;
                             color: $main;
                         }
 
                         .title {
-                            font-size: 14px;
+                            font-size: 18px;
                         }
                     }
 
@@ -110,25 +110,47 @@
 
                                 .dot {
                                     @include dot($main2);
-                                    width: 13px;
-                                    height: 13px;
-                                    border: 2px solid $main2;
+                                    width: 16px;
+                                    height: 16px;
                                     margin-left: 8px;
+                                    border-width: 2px;
+
+                                    &::after {
+                                        width: 8px;
+                                        height: 8px;
+                                    }
                                 }
 
                                 .square {
-                                    @include square($main)
+                                    border: 2px solid $main;
+                                    width: 16px;
+                                    height: 16px;
+                                    border-radius: 4px; 
+                                    position: relative;
+                                    margin-left: 8px;
+
+
+                                    &::after {
+                                        content: "";
+                                        position: absolute;
+                                        right: 50%;
+                                        bottom: 50%;
+                                        transform: translate(50%, 50%);
+                                        width: 8px;
+                                        height: 8px;
+                                        background-color: $main;
+                                        border-radius: 2px;
+                                    }
                                 }
 
                                 .title {
-                                    font-size: 13px;
-                                    font-weight: 200;
+                                    font-size: 17px;
                                 }
                             }
 
                             .interval {
                                 color: $main2;
-                                font-size: 17px;
+                                font-size: 23px;
                             }
                         }
                     }
@@ -158,21 +180,25 @@
             align-items: center;
             justify-content: space-between;
 
-            .title {}
+            .title {
+                font-size: 21px;
+            }
 
             .link {
                 color: $main2;
+                font-size: 20px;
 
                 .icon {
-                    margin-right: 5px;
-                    font-size: 14px;
+                    font-size: 21px;
+                    font-weight: bold;
                 }
             }
         }
 
         .desc {
             color: $desc2;
-            line-height: 3.7;
+            line-height: 90px;
+            font-size: 20px;
         }
     }
 }

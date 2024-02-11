@@ -1,0 +1,76 @@
+.aboutus_info {
+    margin-bottom: 140px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -32rem;
+        left: 82px;
+        height: 100%;
+        width: 40%;
+        background: linear-gradient(223deg, #1c6ecc1f, transparent);
+        -webkit-filter: blur(146px);
+        filter: blur(100px);
+        z-index: -2;
+    }
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -28rem;
+        right: 0px;
+        width: 40%;
+        height: 50rem;
+        filter: blur(100px);
+        z-index: -2;
+        background: linear-gradient(223deg, rgba(250, 193, 4, 0.07), transparent);
+    }
+
+    .right_info {
+        margin-top: -230px;
+        z-index: 1;
+        position: sticky;
+        top: 110px;
+
+        .card_info {
+            @include contact_box;
+        }
+
+        .bottom_action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 25px;
+
+            .icon {
+                font-size: 43px;
+                color: rgb(61, 177, 120);
+                margin-left: 22px;
+            }
+
+            .info {
+                &.title {
+                    font-size: 20px;
+                    margin-bottom: 8px;
+                    font-weight: 300;
+                }
+
+                &.en {
+                    color: rgb(185, 185, 185);
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+
+    .main_desc {
+        width: 100%;
+        color: rgb(136, 136, 136);
+        font-size: 20px;
+        line-height: 4.3;
+        text-align: center;
+        padding-top: 35px;
+    }
+}

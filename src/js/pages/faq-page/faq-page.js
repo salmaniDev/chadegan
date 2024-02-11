@@ -1,0 +1,1 @@
+import '/src/sass/components/Layers/faq-page/main.scss'

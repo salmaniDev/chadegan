@@ -1,0 +1,72 @@
+.check_list_hero {
+    position: relative;
+    padding-top: 70px;
+    margin-top: 142px;
+    margin-bottom: 150px;
+    @include after_bg;
+
+    .info {
+        .title {
+            font-size: 84px;
+            margin-bottom: 5px;
+
+            p {
+                font-weight: 200;
+                color: $main2;
+                font-size: 83px;
+            }
+        }
+
+        .desc {
+            font-size: 18px;
+            line-height: 2;
+            font-weight: 200;
+        }
+    }
+
+    .image {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 60px;
+            right: -110px;
+            width: 350px;
+            height: 400px;
+            background: linear-gradient(223deg, #1c6ecc87, transparent);
+            -webkit-filter: blur(146px);
+            filter: blur(146px);
+            z-index: 1;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -39px;
+            left: 0;
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(223deg, #fac104bd, transparent);
+            -webkit-filter: blur(146px);
+            filter: blur(146px);
+            z-index: -2;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .icon {
+
+            color: $desc4;
+            position: absolute;
+            right: 55px;
+            bottom: 30px;
+            font-size: 50px;
+            transform: rotate(90deg);
+            cursor: pointer;
+
+        }
+    }
+}
