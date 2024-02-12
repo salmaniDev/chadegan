@@ -1,0 +1,113 @@
+.bakery_hero {
+    margin-top: 200px;
+    margin-bottom: 100px;
+
+    .box {
+        width: max-content;
+        margin-inline: auto;
+        max-width: 100%;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -8rem;
+            left: -17rem;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(223deg, #fac10430, transparent);
+            -webkit-filter: blur(146px);
+            filter: blur(150px);
+            z-index: -2;
+        }
+
+        .main_image {
+            position: relative;
+            
+
+            .float_image {
+                position: absolute;
+
+                &.right {
+                    right: 9.7rem;
+                    top: 3.3rem;
+                }
+
+                &.left {
+                    bottom: 3.3rem;
+                    left: 8.9rem;
+                }
+            }
+        }
+
+        >.title {
+            color: $main2;
+            font-size: 38px;
+            position: absolute;
+            left: -6.7rem;
+            bottom: 19rem;
+
+            p {
+                color: $black;
+                padding-top: 10px;
+                font-size: 37px;
+            }
+        }
+
+        .audio_desc {
+            @include audio_desc;
+            width: 563px;
+            background-color: #ffffff;
+            border-radius: 13px;
+            padding: 15px 20px 0px;
+            margin-top: -21px;
+            margin-inline: auto;
+            position: relative;
+        }
+
+        >.stars {
+            position: absolute;
+
+            &.right {
+                top: -20px;
+                right: 6rem;
+                transform: rotate(180deg);
+                z-index: -1;
+            }
+
+            &.left {
+                bottom: 4.9rem;
+                left: 5.5rem;
+            }
+        }
+
+        >.link {
+            color: $main2 !important;
+            position: absolute !important;
+
+            &.left {
+                @include link_btn(#ffffff, 17px 25px 17px 13px, 21px, 200, 12px, 17px);
+                top: 12.5rem;
+                left: 9.8rem;
+            }
+
+            &.right {
+                @include link_btn(#ffffff, 17px 13px 17px 25px, 21px, 200, 12px, 0);
+                bottom: 10rem;
+                right: 10rem;
+
+                .icon {
+                    margin-left: 17px
+                }
+            }
+        }
+    }
+
+    .hero_desc {
+        font-size: 20px;
+        color: #B9B9B9;
+        line-height: 90px;
+        margin-top: 45px;
+        margin-inline: auto;
+    }
+}

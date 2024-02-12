@@ -1,0 +1,140 @@
+.nomads_hero {
+    margin-top: 120px;
+    padding-top: 100px;
+
+    .box {
+        width: max-content;
+        margin-inline: auto;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: -15rem;
+            bottom: -10rem;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(270deg, #1c6ecc42, transparent);
+            -webkit-filter: blur(146px);
+            filter: blur(100px);
+            z-index: -2;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -3rem;
+            left: -17rem;
+            width: 700px;
+            height: 100%;
+            background: linear-gradient(223deg, #fac1043d, transparent);
+            -webkit-filter: blur(146px);
+            filter: blur(150px);
+            z-index: -2;
+        }
+
+        .link {
+            color: $main2 !important;
+            position: absolute !important;
+
+            &.first {
+                @include link_btn(#ffffff, 17px 13px 17px 25px, 21px, 200, 12px, 0);
+                top: 113px;
+                right: 0;
+
+                .icon {
+                    margin-left: 17px
+                }
+            }
+
+            &.sec {
+                @include link_btn(#ffffff, 17px 25px 17px 13px, 21px, 200, 12px, 17px);
+                left: -160px;
+                bottom: 125px;
+            }
+        }
+
+        .main_image {
+            width: 500px;
+        }
+
+        .title {
+            color: $main2;
+            font-size: 38px;
+            margin-bottom: 45px;
+            position: absolute;
+            top: 82px;
+            left: -12.4rem;
+
+            p {
+                color: $black;
+                padding-top: 10px;
+                font-size: 37px;
+                padding-right: 10px;
+            }
+        }
+
+        .en_title {
+            position: absolute;
+
+            &.bottom {
+                bottom: 4rem;
+                right: -11.2rem;
+                z-index: -1;
+            }
+
+            &.top {
+                top: -115px;
+                left: -8.3rem;
+                z-index: -1;
+            }
+        }
+
+        .stars {
+            position: absolute;
+            left: -4.8rem;
+            bottom: 13.5rem;
+            z-index: -1;
+        }
+
+        >.heart {
+            color: $red;
+            position: absolute;
+            background-color: #fff;
+            padding: 14px 13px;
+            border-radius: 50%;
+
+            &.right {
+                top: 0;
+                right: 5.5rem;
+                transform: rotate(40deg);
+            }
+
+            &.left {
+                bottom: 18.5rem;
+                z-index: 2;
+                left: 0;
+                transform: rotate(-32deg);
+            }
+        }
+    }
+
+    .audio_desc {
+
+        @include audio_desc;
+        width: 545px;
+        margin-inline: auto;
+        background-color: #fff;
+        border-radius: 23px;
+        padding: 15px 20px 0px;
+        margin-top: -95px;
+        position: relative;
+    }
+
+    .main_desc {
+        font-size: 20px;
+        color: #B9B9B9;
+        line-height: 90px;
+        margin-top: 55px;
+    }
+}

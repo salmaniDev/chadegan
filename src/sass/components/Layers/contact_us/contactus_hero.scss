@@ -1,8 +1,7 @@
 .contactus_hero {
-    position: relative;
     margin-top: 142px;
     padding-top: 230px;
-    padding-right: 98px;
+    position: relativee;
     @include after_bg;
 
     &::before {
@@ -18,38 +17,41 @@
         z-index: -2;
     }
 
-    .right_box {
-        display: flex;
+    .main_card {
+        position: relative;
 
-        .map {
-            width: 505px;
-            margin-left: 23px;
-            position: relative;
+        .right_box {
+            display: flex;
 
-            .link {
-                background-color: #EDF8F3;
-                color: $main;
-                border-radius: 16px;
-                padding: 16px 56px;
-                font-size: 20px;
-                position: absolute;
-                bottom: 10px;
-                left: -6px;
-                font-weight: 300;
+            .map {
+                width: 505px;
+                margin-left: 23px;
+                position: relative;
 
-                .icon {
-                    font-size: 26px;
-                    margin-left: 4px;
+                .link {
+                    background-color: #EDF8F3;
+                    color: $main;
+                    border-radius: 16px;
+                    padding: 16px 56px;
+                    font-size: 20px;
+                    position: absolute;
+                    bottom: 10px;
+                    left: -6px;
+                    font-weight: 300;
+
+                    .icon {
+                        font-size: 26px;
+                        margin-left: 4px;
+                    }
                 }
             }
-        }
 
-        .card_info {
-            width: 475px;
-            @include contact_box;
+            .card_info {
+                width: 475px;
+                @include contact_box;
+            }
         }
     }
-
     .main_image {
         mix-blend-mode: multiply;
         position: absolute;

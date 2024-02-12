@@ -1,0 +1,151 @@
+.butcher_shop_hero {
+    margin-top: 50px;
+    overflow: hidden;
+    position: relative;
+
+    .box {
+        width: 944px;
+        margin-inline: auto;
+
+        .hero_info {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                right: -12rem;
+                bottom: -8rem;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(270deg, #1c6ecc36, transparent);
+                -webkit-filter: blur(146px);
+                filter: blur(150px);
+                z-index: -2;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -8rem;
+                left: -17rem;
+                width: 700px;
+                height: 100%;
+                background: linear-gradient(223deg, #fac10429, transparent);
+                -webkit-filter: blur(146px);
+                filter: blur(150px);
+                z-index: -2;
+            }
+
+            .main_image {}
+
+            >.title {
+                color: $main2;
+                font-size: 38px;
+                position: absolute;
+                left: 32px;
+                top: 131px;
+
+                p {
+                    color: $black;
+                    padding-top: 10px;
+                    font-size: 37px;
+                    padding-right: 12px;
+                }
+            }
+
+            .audio_desc {
+                @include audio_desc;
+                width: 563px;
+                background-color: #ffffff;
+                border-radius: 13px;
+                padding: 15px 20px 0px;
+                position: absolute;
+                left: 0;
+                bottom: -78px;
+            }
+
+            >.link {
+                color: $main2 !important;
+                position: absolute !important;
+
+                &.first {
+                    @include link_btn(#ffffff, 17px 25px 17px 13px, 21px, 200, 12px, 17px);
+                    bottom: 7.6rem;
+                    left: 166px;
+                }
+
+                &.sec {
+                    @include link_btn(#ffffff, 17px 13px 17px 25px, 21px, 200, 12px, 0);
+                    top: 20.5rem;
+                    right: 143px;
+
+                    .icon {
+                        margin-left: 17px
+                    }
+                }
+            }
+
+            >.star {
+                position: absolute;
+
+                &.left {
+                    left: 11.9rem;
+                    top: 19.2rem;
+                }
+
+                &.right {
+                    right: -4.5rem;
+                    transform: rotate(180deg);
+                    top: 11.2rem;
+                }
+            }
+
+            >.heart {
+                color: $red;
+                position: absolute;
+                background-color: #fff;
+                padding: 14px 13px;
+                border-radius: 50%;
+
+                &.right {
+                    transform: rotate(40deg);
+                    top: 15rem;
+                    right: 19rem;
+                }
+
+                &.left {
+                    transform: rotate(-32deg);
+                    top: 18.8rem;
+                    left: 17rem
+                }
+            }
+        }
+
+        .hero_desc {
+            font-size: 20px;
+            color: $desc4;
+            line-height: 90px;
+            margin-top: 135px;
+        }
+    }
+
+    .absolute_image {
+        position: absolute;
+        object-fit: cover;
+
+        &.left {
+            left: -14rem;
+            top: 40rem;
+            width: 535px;
+            height: 365px;
+        }
+
+        &.right {
+            top: 39.5rem;
+            right: -14.5rem;
+            z-index: -1;
+            width: 535px;
+            height: 585px;
+        }
+    }
+}

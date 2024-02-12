@@ -1,0 +1,45 @@
+.beach_desc {
+    padding-top: 150px;
+    margin-bottom: 60px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 20rem;
+        width: 500px;
+        height: 87%;
+        background: linear-gradient(223deg, #fac10424, transparent);
+        -webkit-filter: blur(146px);
+        filter: blur(100px);
+        z-index: -2;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 10rem;
+        width: 590px;
+        height: 50%;
+        background: linear-gradient(223deg, #1c6ecc29, transparent);
+        -webkit-filter: blur(146px);
+        filter: blur(100px);
+        z-index: -2;
+    }
+
+    .audio_desc {
+        width: 500px;
+        margin-inline: auto;
+        @include audio_desc;
+
+
+    }
+    .main_desc {
+        font-size: 20px;
+        color: $desc4;
+        line-height: 90px;
+        margin-top: 200px;
+    }
+}

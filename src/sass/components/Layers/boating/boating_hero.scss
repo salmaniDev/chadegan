@@ -1,0 +1,133 @@
+.boating_hero {
+    margin-top: 105px;
+
+    .box {
+        width: 1309px;
+        margin-inline: auto;
+
+        .hero_info {
+            position: relative;
+            transform: translateX(10px);
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: -12rem;
+                bottom: -8rem;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(270deg, #1c6ecc26, transparent);
+                -webkit-filter: blur(146px);
+                filter: blur(150px);
+                z-index: 1;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -8rem;
+                left: -17rem;
+                width: 700px;
+                height: 100%;
+                background: linear-gradient(223deg, #fac10426, transparent);
+                -webkit-filter: blur(146px);
+                filter: blur(150px);
+                z-index: 1;
+            }
+
+            .main_image {}
+
+            >.title {
+                color: $main2;
+                font-size: 38px;
+                position: absolute;
+                left: 9.3rem;
+                top: 21.4rem;
+                z-index: 2;
+
+                p {
+                    color: $black;
+                    padding-top: 10px;
+                    font-size: 37px;
+                }
+            }
+
+            >.link {
+                color: $main2 !important;
+                position: absolute !important;
+                z-index: 2;
+
+                &.left {
+                    @include link_btn(#ffffff, 17px 25px 17px 13px, 21px, 200, 12px, 17px);
+                    bottom: 16rem;
+                    left: 23rem;
+                }
+
+                &.right {
+                    @include link_btn(#ffffff, 17px 13px 17px 25px, 21px, 200, 12px, 0);
+                    top: 21.7rem;
+                    right: 25.3rem;
+
+                    .icon {
+                        margin-left: 17px
+                    }
+                }
+            }
+
+            .audio_desc {
+                width: 563px;
+                background-color: #ffffff;
+                border-radius: 13px;
+                padding: 15px 20px 0px;
+                position: absolute;
+                bottom: 6.4rem;
+                right: 50%;
+                transform: translateX(50%);
+                @include audio_desc;
+                z-index: 2;
+            }
+
+            >.heart {
+                color: $red;
+                position: absolute;
+                background-color: #fff;
+                padding: 14px 13px;
+                border-radius: 50%;
+
+                &.left {
+                    transform: rotate(-32deg);
+                    top: 17.8rem;
+                    left: 26rem;
+                }
+
+                &.right {
+                    transform: rotate(40deg);
+                    top: 11.5rem;
+                    right: 34.7rem;
+                }
+            }
+
+            .stars {
+                position: absolute;
+
+                &.left {
+                    left: 18.5rem;
+                    bottom: 11rem;
+                }
+
+                &.right {
+                    right: 31rem;
+                    transform: rotate(180deg);
+                    top: 7.4rem;
+                }
+            }
+        }
+
+        .hero_desc {
+            font-size: 20px;
+            color: $desc4;
+            line-height: 90px;
+        }
+    }
+
+}

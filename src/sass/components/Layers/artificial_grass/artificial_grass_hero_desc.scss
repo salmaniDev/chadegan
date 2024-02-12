@@ -1,0 +1,47 @@
+.artificial_grass_hero_desc {
+    position: relative;
+    padding-top: 130px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 15rem;
+        top: 6rem;
+        width: 50%;
+        height: 500px;
+        background: linear-gradient(135deg, #1c6ecc21, transparent);
+        -webkit-filter: blur(146px);
+        filter: blur(150px);
+        z-index: -2;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 5rem;
+        right: 12rem;
+        width: 500px;
+        height: 500px;
+        background: linear-gradient(223deg, #fac1044a, transparent);
+        -webkit-filter: blur(146px);
+        filter: blur(150px);
+        z-index: -2;
+    }
+
+    .box {
+        position: relative;
+
+        .audio_desc {
+            @include audio_desc;
+            width: 495px;
+            margin-inline: auto;
+        }
+
+        .main_desc {
+            font-size: 20px;
+            color: $desc4;
+            line-height: 90px;
+            margin-top: 135px;
+        }
+    }
+}

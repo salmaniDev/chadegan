@@ -1,0 +1,102 @@
+.petrol_station_hero {
+    margin-block: 100px;
+
+    .box {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 6rem;
+            left: 5rem;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1c6ecc2e, transparent);
+            -webkit-filter: blur(146px);
+            filter: blur(150px);
+            z-index: -2;
+        }
+
+        .main_image {}
+
+        >.title {
+            color: $main2;
+            position: absolute;
+            font-size: 38px;
+            left: 11.5rem;
+            top: 17.2rem;
+
+            p {
+                color: $black;
+                padding-top: 10px;
+                font-size: 37px;
+            }
+        }
+
+        >.link {
+            color: $main2 !important;
+            position: absolute !important;
+
+            &.left {
+                @include link_btn(#ffffff, 17px 25px 17px 13px, 21px, 200, 12px, 17px);
+                bottom: 16.5rem;
+                left: 18rem;
+            }
+
+            &.right {
+                @include link_btn(#ffffff, 17px 13px 17px 25px, 21px, 200, 12px, 0);
+                right: 19.5rem;
+                top: 7.3rem;
+
+                .icon {
+                    margin-left: 17px
+                }
+            }
+        }
+
+        >.heart {
+            color: $red;
+            position: absolute;
+            background-color: #fff;
+            padding: 14px 13px;
+            border-radius: 50%;
+            transform: rotate(-32deg);
+            top: 13.5rem;
+            left: 18.5rem;
+        }
+
+        .stars {
+            position: absolute;
+
+            &.right {
+                right: 16.5rem;
+                transform: rotate(180deg);
+                top: 2.5rem;
+            }
+
+            &.left {
+                left: 19rem;
+                bottom: -0.5rem;
+            }
+        }
+
+        .audio_desc {
+            @include audio_desc;
+            width: 557px;
+            background-color: #ffffff;
+            border-radius: 13px;
+            padding: 15px 20px 0px;
+            position: absolute;
+            bottom: 4.8rem;
+            z-index: 2;
+            left: 22.7rem;
+        }
+    }
+
+    .main_desc {
+        font-size: 20px;
+        color: $desc4;
+        line-height: 90px;
+        margin-top: 20px;
+    }
+}

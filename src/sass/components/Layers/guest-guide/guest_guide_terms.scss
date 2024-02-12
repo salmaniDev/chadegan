@@ -1,0 +1,28 @@
+.guest_guide_terms {
+    position: relative;
+    padding-block: 90px;
+    margin-block: 105px;
+
+    @include after_bg;
+
+    &::after {
+        background-color: $bg;
+    }
+
+    .terms_head {
+        @include terms_head;
+    }
+
+    .terms_content {
+
+        .card_info {
+            @include contact_box;
+        }
+
+        .contents {
+            margin-right: 40px;
+
+            @include terms_content;
+        }
+    }
+}

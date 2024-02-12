@@ -22,6 +22,16 @@ export default {
                 terms: resolve(__dirname, '/pages/terms.html'),
                 aboutUs: resolve(__dirname, '/pages/about-us.html'),
                 contactUs: resolve(__dirname, '/pages/contact-us.html'),
+                guestGuide: resolve(__dirname, '/pages/guest-guide.html'),
+                beach: resolve(__dirname, '/pages/beach.html'),
+                nomads: resolve(__dirname, '/pages/nomads.html'),
+                butcherShop: resolve(__dirname, '/pages/butcher-shop.html'),
+                bakery: resolve(__dirname, '/pages/bakery.html'),
+                boating: resolve(__dirname, '/pages/boating.html'),
+                artificialGrass: resolve(__dirname, '/pages/artificial_grass.html'),
+                restaurant: resolve(__dirname, '/pages/restaurant.html'),
+                petrolStation: resolve(__dirname, '/pages/petrol_station.html'),
+                bowling: resolve(__dirname, '/pages/bowling.html'),
             }
         }
     },

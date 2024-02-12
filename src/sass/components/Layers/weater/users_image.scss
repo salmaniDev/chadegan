@@ -23,8 +23,8 @@
         grid-template-columns: repeat(4, 389px);
         justify-content: space-between;
 
-    .item {
-        @include blog_item;
+        .item {
+            @include blog_item;
+        }
     }
-}
 }

@@ -1,0 +1,33 @@
+.bowling_hero_desc {
+    margin-top: 100px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 50%;
+        top: 0;
+        width: 100%;
+        transform: translateX(50%);
+        height: 500px;
+        background: linear-gradient(180deg, #1c6ecc45, transparent);
+        -webkit-filter: blur(146px);
+        filter: blur(150px);
+        z-index: -2;
+    }
+
+    .box {
+        .audio_desc {
+            @include audio_desc;
+            width: 495px;
+            margin-inline: auto;
+        }
+
+        .main_desc {
+            font-size: 20px;
+            color: $desc4;
+            line-height: 90px;
+            margin-top: 135px;
+        }
+    }
+}
