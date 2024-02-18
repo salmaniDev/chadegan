@@ -3,13 +3,13 @@
     position: relative;
 
     .image {
-        mask-image: url('../image/mask/13.svg');
+        mask-image: url('/image/mask/13.svg');
         mask-repeat: no-repeat;
         -webkit-mask-repeat: no-repeat;
         width: 100%;
         height: 754px;
         mask-size: 100%;
-        background-image: url('../img/guest_guide/1.jpg');
+        background-image: url('/img/guest_guide/1.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
