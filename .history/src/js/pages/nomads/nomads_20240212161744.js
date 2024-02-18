@@ -1,5 +1,5 @@
 import '../../../sass/components/Layers/nomads/main.scss'
-import WaveSurfer from 'wavesurfer.js'
+import WaveSurfer from "wavesurfer.js"
 
 window.addEventListener('load', () => {
     const audioTags = document.querySelectorAll('[audio_wave]')
