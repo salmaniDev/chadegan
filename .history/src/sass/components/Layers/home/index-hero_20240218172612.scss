@@ -503,7 +503,6 @@
     padding-top: 35px;
 
     .right {
-      width: 100%;
       .info_top {
         margin-bottom: 45px;
         .title {
@@ -512,21 +511,6 @@
         .desc {
           line-height: 33px;
           font-weight: 200;
-        }
-      }
-      .weather_conditions {
-        .link {
-          justify-content: space-around;
-          .item + .item {
-            margin-right: 0;
-          }
-        }
-      }
-      .destination_distance {
-        .link {
-          .item + .item {
-            padding-right: 70px;
-          }
         }
       }
     }

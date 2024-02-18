@@ -1,3 +1,9 @@
+if (import.meta.hot) {
+  import.meta.hot.accept(() => {
+    import.meta.hot.invalidate();
+  });
+}
+
 // Base Style
 import "./src/sass/base/main.scss";
 

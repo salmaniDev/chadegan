@@ -1,11 +1,7 @@
 import Inspect from "vite-plugin-inspect";
-import { defineConfig } from "vite";
-import dns from "dns";
 import { resolve } from "path";
 
-dns.setDefaultResultOrder('verbatim')
-
-export default defineConfig({
+export default  {
   base: "/chadeganV2/v2/",
   plugins: [Inspect()],
   build: {
@@ -38,4 +34,4 @@ export default defineConfig({
       },
     },
   },
-});
+};
