@@ -1,7 +1,128 @@
-.comments_holder{
+.comments_holder {
     position: relative;
     padding-top: 100px;
     margin-bottom: 100px;
 
-        @include after_bg;
+    @include after_bg;
+}
+
+.send_message {
+    form {
+        .rating-group {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 30px;
+            background-color: #F5F9FD;
+            padding: 20px 15px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+
+            .rating-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .rating-label {
+                    font-weight: 200;
+                    font-size: 18px;
+                    font-family: 'dana5';
+                    color: $black;
+                }
+
+                .box_stars {
+                    display: inline-flex;
+                    flex-direction: row-reverse;
+                    gap: 5px;
+
+                    .star {
+                        font-size: 20px;
+                        margin-right: 4px;
+                        color: #ededed;
+                        cursor: pointer;
+                        transition: color 0.2s;
+
+                        i {
+                            pointer-events: none; // تا فقط span کلیک بشه نه خود آیکون
+                        }
+
+                        &.active {
+                            color: $yellow; // زرد
+                        }
+                    }
+                }
+            }
+        }
+
+        .upload-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: #F5F9FD;
+            padding: 18px 10px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+
+            .text {
+                font-size: 16px;
+                font-weight: 200;
+                font-family: dana5;
+                color: $black;
+            }
+
+            .file-names {
+                font-size: 12px;
+                font-weight: 300;
+                color: $black;
+                max-width: 300px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin-right: auto;
+            }
+
+            .upload_btn {
+                width: 125px;
+                height: 50px;
+                border-radius: 40px;
+                border: 2px solid $main2;
+                color: $main2;
+                background-color: transparent;
+                transition: $transition;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                cursor: pointer;
+
+                svg {
+                    width: 1.5em;
+                    font-weight: bold;
+                    transition: $transition;
+                }
+
+                .text_btn {
+                    display: none;
+                    transition: $transition;
+                    font-family: dana5;
+                    font-weight: 100;
+                    font-size: 14px;
+                }
+
+                &:hover {
+                    background-color: $main2;
+                    color: #fff;
+
+                    &>svg {
+                        display: none;
+                    }
+
+                    &>.text_btn {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+    }
 }

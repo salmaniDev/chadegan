@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>نمایش محصول</title>
+    <style>
+
+
+    </style>
 </head>
 
 <body>
@@ -386,6 +390,80 @@
                     </div>
                 </div>
                 <div class="col-md-6">
+
+                    <form id="reviewForm">
+
+                        <div class="info">
+                            <div class="form-group">
+                                <input type="text" id="fullName" class="input_info" name="fullName"
+                                    placeholder="نام و نام خانوادگی" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" id="phone" class="input_info" name="phone" placeholder="شماره تماس"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="message" class="textarea_info" name="message"
+                                    placeholder="نظر خود را وارد کنید.." required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="rating-group">
+                            <div class="rating-item">
+                                <div class="rating-label">امکانات هتل :</div>
+                                <div class="box_stars" data-input="rating_facilities"></div>
+                                <input type="hidden" name="rating_facilities" value="0">
+                            </div>
+                            <div class="rating-item">
+                                <div class="rating-label">قیمت :</div>
+                                <div class="box_stars" data-input="rating_price"></div>
+                                <input type="hidden" name="rating_price" value="0">
+                            </div>
+                            <div class="rating-item">
+                                <div class="rating-label">کیفیت اتاق ها :</div>
+                                <div class="box_stars" data-input="rating_rooms"></div>
+                                <input type="hidden" name="rating_rooms" value="0">
+                            </div>
+                            <div class="rating-item">
+                                <div class="rating-label">موقعیت مکانی :</div>
+                                <div class="box_stars" data-input="rating_location"></div>
+                                <input type="hidden" name="rating_location" value="0">
+                            </div>
+                            <div class="rating-item">
+                                <div class="rating-label">رفتار پرسنل :</div>
+                                <div class="box_stars" data-input="rating_staff"></div>
+                                <input type="hidden" name="rating_staff" value="0">
+                            </div>
+                        </div>
+
+                        <div class="upload-wrapper">
+                            <span class="text">بارگزاری تصاویر شما از چادگان و ویلا :</span>
+                            <input type="file" id="images" name="images" accept="image/*" multiple hidden>
+
+                            <span id="fileNames" class="file-names">هیچ فایلی انتخاب نشده</span>
+
+                            <button type="button" class="upload_btn" id="uploadBtn">
+                                <svg class="w-6 h-6" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
+                                        stroke-linejoin="round" stroke-linecap="round"></path>
+                                </svg>
+                                <span class="text_btn">بارگزاری تصاویر</span>
+                            </button>
+                        </div>
+
+                        <div class="box-cod">
+                            <div id="randomCode" class="code"></div>
+                            <input type="text" name="captchaInput" class="input_code" placeholder="کد را وارد کنید" required>
+                            <button type="submit" class="send_comment">ارسال نظر
+                                <i class="icon icon-arrow-left"></i>
+                            </button>
+                        </div>
+                    </form>
+
                     <div class="comment_actions">
                         <div class="info">
                             <div class="top">
@@ -534,6 +612,42 @@
                                 <img src="./img/products/15.jpg" alt="image">
                             </div>
                         </div>
+                        <div class="item">
+                            <div class="top">
+                                <div class="rigth">
+                                    <div class="user_info">
+                                        <img src="./image/user.svg" class="user_image" alt="image">
+                                        <div class="info">
+                                            <h4 class="title">مرسانا توکلی پور</h4>
+                                            <div class="like">
+                                                <span class="icon"><i class="icon-like"></i> 23</span>
+                                                <p class="desc">[ نفر دیگر هم نظر مرسانا هستند ]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stars">
+                                        <div class="icons">
+                                            <i class="icon icon-star-fill"></i>
+                                            <i class="icon icon-star-fill"></i>
+                                            <i class="icon icon-star-fill"></i>
+                                            <i class="icon icon-star-fill"></i>
+                                            <i class="icon icon-star"></i>
+                                        </div>
+                                        <p class="desc">۴ روز پیش</p>
+                                    </div>
+                                </div>
+                                <i class="icon icon-Info-menu"></i>
+                            </div>
+                            <p class="desc">سر زمان ویلا رو تحویل دادن خیلی تمیز وخوش بود بود وسایل تمیز و لحاف روکش شده
+                                بود برای استراحت واقعا به همچین سرویس دهی احتیاج بودم ممنون چادگان</p>
+
+                            <div class="images">
+                                <img src="./img/products/14.jpg" alt="image">
+                                <img src="./img/products/5.jpg" alt="image">
+                                <img src="./img/products/15.jpg" alt="image">
+                                <img src="./img/products/5.jpg" alt="image">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -590,26 +704,27 @@
     </footer>
     <div class="mobile_footer">
         <div class="container">
-          <div class="row box">
-            <a href="#" class="link">
-              <span class="icon icon-Notebook"></span>
-              <span class="title">لیست ویلا</span>
-            </a>
-            <a href="#" class="link">
-              <span class="icon icon-users"></span>
-              <span class="title">درباره ما</span>
-            </a>
-            <a href="#" class="link">
-              <span class="icon icon-Telephone"></span>
-              <span class="title">تماس با ما</span>
-            </a>
-            <a href="#" class="link">
-              <span class="icon icon-home2"></span>
-              <span class="title">دهکده</span>
-            </a>
-          </div>
+            <div class="row box">
+                <a href="#" class="link">
+                    <span class="icon icon-Notebook"></span>
+                    <span class="title">لیست ویلا</span>
+                </a>
+                <a href="#" class="link">
+                    <span class="icon icon-users"></span>
+                    <span class="title">درباره ما</span>
+                </a>
+                <a href="#" class="link">
+                    <span class="icon icon-Telephone"></span>
+                    <span class="title">تماس با ما</span>
+                </a>
+                <a href="#" class="link">
+                    <span class="icon icon-home2"></span>
+                    <span class="title">دهکده</span>
+                </a>
+            </div>
         </div>
-      </div>
+    </div>
+
     <script type="module" src="/main.js"></script>
     <script type="module" src="/src/js/pages/show-product/show-product.js"></script>
 </body>

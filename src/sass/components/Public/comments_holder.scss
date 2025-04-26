@@ -1,5 +1,238 @@
 .comments_holder {
 
+    #reviewForm {
+        background-image: url(/chadeganV2/v2/image/mask/3.svg);
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 500px;
+        border-radius: 15px;
+        padding: 15px 20px;
+        position: relative;
+        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 30px;
+            width: 380px;
+            height: 400px;
+            background: linear-gradient(180deg, #1c6ecc8a, transparent);
+            -webkit-filter: blur(146px);
+            filter: blur(53px);
+            z-index: -2;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 120px;
+            right: 50%;
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(223deg, #fac1047d, transparent);
+            -webkit-filter: blur(146px);
+            filter: blur(146px);
+            z-index: -2;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .form-group {
+                background-color: #F5F9FD;
+                padding: 17px 19px;
+                border-radius: 15px;
+
+                .input_info,
+                .textarea_info {
+                    width: 100%;
+                    padding: 11px 10px;
+                    font-size: 15px;
+                    font-weight: 200;
+                    font-family: dana5;
+                    border: 0;
+                    background: transparent;
+                    color: #3D3C45;
+                }
+
+                .textarea_info {
+                    height: 100px;
+                    resize: vertical;
+                    resize: none;
+                }
+            }
+
+        }
+
+
+        .rating-group {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 30px;
+            padding-top: 20px;
+
+            .rating-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .rating-label {
+                    font-weight: 200;
+                    font-size: 18px;
+                    font-family: 'dana5';
+                    color: $black;
+                }
+
+                .box_stars {
+                    display: inline-flex;
+                    flex-direction: row-reverse;
+                    gap: 5px;
+
+                    .star {
+                        font-size: 20px;
+                        margin-right: 4px;
+                        color: #ececee;
+                        cursor: pointer;
+                        transition: color 0.2s;
+
+                        i {
+                            pointer-events: none; // تا فقط span کلیک بشه نه خود آیکون
+                        }
+
+                        &.active {
+                            color: $yellow; // زرد
+                        }
+                    }
+                }
+            }
+        }
+
+        .upload-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+
+
+            .text {
+                font-size: 16px;
+                font-weight: 200;
+                font-family: dana5;
+                color: $black;
+            }
+
+            .file-names {
+                font-size: 12px;
+                font-weight: 300;
+                color: $black;
+                max-width: 300px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin-right: auto;
+            }
+
+            .upload_btn {
+                width: 125px;
+                height: 50px;
+                border-radius: 40px;
+                border: 2px solid $main2;
+                color: $main2;
+                background-color: transparent;
+                transition: $transition;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                cursor: pointer;
+
+                svg {
+                    width: 1.5em;
+                    font-weight: bold;
+                    transition: $transition;
+                }
+
+                .text_btn {
+                    display: none;
+                    transition: $transition;
+                    font-family: dana5;
+                    font-weight: 100;
+                    font-size: 14px;
+                }
+
+                &:hover {
+                    background-color: $main2;
+                    color: #fff;
+
+                    &>svg {
+                        display: none;
+                    }
+
+                    &>.text_btn {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .box-cod {
+            padding-block: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 70px;
+
+            .code {
+                font-size: 18px;
+                padding-inline: 10px;
+                user-select: none;
+                border-left: 1px dashed $border2;
+            }
+
+            .input_code {
+                width: 100px;
+                padding: 11px 10px;
+                font-size: 14px;
+                font-weight: 200;
+                font-family: dana5;
+                border: 0;
+            }
+
+            .send_comment {
+                background-color: $main2;
+                color: #fff;
+                border-radius: 40px;
+                padding: 12px 15px;
+                font-size: 18px;
+                font-weight: 100;
+                margin-right: auto;
+                display: table;
+                border: 0;
+                font-family: dana5;
+                cursor: pointer;
+                transition: all 0.3s;
+
+                .icon {
+                    font-size: 24px;
+                    margin-right: 2px;
+                }
+
+                &:hover {
+                    background-color: #0e77d9;
+                }
+            }
+        }
+    }
+
     .comment_reactions {
         text-align: center;
         width: max-content;
