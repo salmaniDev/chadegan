@@ -55,6 +55,7 @@
 
     .actions {
       margin-left: 25px;
+      display: none;
 
       .link {
         .icon {
@@ -66,6 +67,29 @@
             color: $main2;
           }
         }
+      }
+    }
+
+    .info {
+      margin-left: 25px;
+      text-align: left;
+
+      .number {
+        color: $main2;
+        font-size: 18px;
+        font-weight: 300;
+        display: block;
+
+        span {
+          color: $black;
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+
+      .desc {
+        color: $black;
+        font-size: 12px;
       }
     }
   }
@@ -153,6 +177,7 @@
     &.active {
       padding-block: 18px;
     }
+
     .links {
       display: none;
     }

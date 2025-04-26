@@ -17,6 +17,7 @@
     "i": "^0.3.7",
     "jquery": "^3.7.1",
     "npm": "^10.4.0",
+    "sass": "^1.86.3",
     "slick-carousel": "^1.8.1",
     "vite-plugin-inspect": "^0.8.1",
     "wavesurfer.js": "^7.7.2"

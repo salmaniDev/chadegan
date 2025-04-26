@@ -5,6 +5,14 @@
   list-style: none;
 }
 
+iframe {
+  width: 100%;
+  margin-inline: auto;
+  display: block;
+  border-radius: 15px;
+  height: 420px;
+}
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #9a9a9a;

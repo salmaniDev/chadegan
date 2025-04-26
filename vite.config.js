@@ -8,6 +8,9 @@ dns.setDefaultResultOrder('verbatim')
 export default defineConfig({
   base: "/chadeganV2/v2/",
   plugins: [Inspect()],
+  css: {
+    devSourcemap: true
+  },
   build: {
     rollupOptions: {
       input: {

@@ -1,3 +1,7 @@
 .guest_guide_facility {
     @include facility;
+
+    .box {
+        @include data_table_box;
+    }
 }

@@ -43,13 +43,13 @@
       position: relative;
 
       &:hover {
-        > .icon {
+        >.icon {
           left: -10px;
           color: $main2;
         }
       }
 
-      > .icon {
+      >.icon {
         color: $desc4;
         position: absolute;
         bottom: 50%;
@@ -67,13 +67,12 @@
         .item {
           @include weather_item;
 
-          + .item {
+          +.item {
             margin-right: 129px;
           }
         }
 
-        > .icon {
-        }
+        >.icon {}
       }
     }
 
@@ -82,7 +81,7 @@
         .item {
           @include distance_item;
 
-          + .item {
+          +.item {
             padding-right: 129px;
           }
         }
@@ -94,6 +93,7 @@
     display: flex;
     white-space: normal;
     overflow-x: auto;
+    // scroll-behavior: smooth;
     position: absolute;
     top: 0;
     left: 0;
@@ -113,6 +113,12 @@
         left: 0;
         bottom: 0;
       }
+    }
+
+    &.dragging {
+      user-select: none;
+      cursor: grabbing;
+      cursor: -webkit-grabbing;
     }
 
     .item {
@@ -173,7 +179,7 @@
         transform: rotate(278deg);
       }
 
-      > .image {
+      >.image {
         object-fit: cover;
         width: 100%;
         border-radius: 15px;
@@ -275,6 +281,11 @@
       &:hover {
         color: $main2;
       }
+
+      &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
     }
   }
 
@@ -320,7 +331,7 @@
             }
           }
 
-          .item + .item {
+          .item+.item {
             margin-right: 110px;
           }
         }
@@ -328,7 +339,7 @@
 
       .destination_distance {
         .link {
-          .item + .item {
+          .item+.item {
             padding-right: 105px;
           }
 
@@ -361,7 +372,7 @@
       }
 
       .link {
-        > .icon {
+        >.icon {
           font-size: 25px;
         }
       }
@@ -424,7 +435,7 @@
         margin-bottom: 45px;
 
         .link {
-          .item + .item {
+          .item+.item {
             margin-right: 110px;
           }
 
@@ -462,7 +473,7 @@
       .link {
         justify-content: center;
 
-        > .icon {
+        >.icon {
           font-size: 27px;
           left: 30px;
         }
@@ -479,8 +490,7 @@
       position: relative;
       padding-right: 0 !important;
 
-      .item {
-      }
+      .item {}
     }
   }
 
@@ -504,27 +514,33 @@
 
     .right {
       width: 100%;
+
       .info_top {
         margin-bottom: 45px;
+
         .title {
           font-size: 28px;
         }
+
         .desc {
           line-height: 33px;
           font-weight: 200;
         }
       }
+
       .weather_conditions {
         .link {
           justify-content: space-around;
-          .item + .item {
+
+          .item+.item {
             margin-right: 0;
           }
         }
       }
+
       .destination_distance {
         .link {
-          .item + .item {
+          .item+.item {
             padding-right: 70px;
           }
         }
