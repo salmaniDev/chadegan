@@ -1,5 +1,9 @@
 .comments_holder {
-
+    .user_comments {
+        @media screen and (max-width:768px) {
+            margin-top: 70px;
+        }
+    }
     #reviewForm {
         background-image: url(/chadeganV2/v2/image/mask/3.svg);
         background-size: cover;
@@ -16,6 +20,11 @@
         gap: 20px;
 
         &::after {
+            @media screen and (max-width:425px) {
+                right: 0;
+                width: 100%;
+            }
+
             content: "";
             position: absolute;
             bottom: 0;
@@ -29,6 +38,11 @@
         }
 
         &::before {
+            @media screen and (max-width:425px) {
+                right: 0;
+                width: 100%;
+            }
+
             content: "";
             position: absolute;
             top: 120px;
@@ -86,6 +100,10 @@
                 align-items: center;
 
                 .rating-label {
+                    @media screen and (max-width:425px) {
+                        font-size: 16px;
+                    }
+
                     font-weight: 200;
                     font-size: 18px;
                     font-family: 'dana5';
@@ -98,6 +116,10 @@
                     gap: 5px;
 
                     .star {
+                        @media screen and (max-width:425px) {
+                            font-size: 16px;
+                        }
+
                         font-size: 20px;
                         margin-right: 4px;
                         color: #ececee;
@@ -117,10 +139,16 @@
         }
 
         .upload-wrapper {
+            @media screen and (max-width:425px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
             display: flex;
             align-items: center;
             gap: 15px;
             margin-top: 20px;
+            position: relative;
 
 
             .text {
@@ -131,6 +159,11 @@
             }
 
             .file-names {
+                @media screen and (max-width:425px) {
+                    position: absolute;
+                    bottom: -25px;
+                }
+
                 font-size: 12px;
                 font-weight: 300;
                 color: $black;
@@ -185,6 +218,10 @@
         }
 
         .box-cod {
+            @media screen and (max-width:320px) {
+                gap: 5px;
+            }
+
             padding-block: 20px;
             display: flex;
             align-items: center;
@@ -192,6 +229,11 @@
             margin-bottom: 70px;
 
             .code {
+                @media screen and (max-width:320px) {
+                    font-size: 16px;
+                    padding-inline: 6px;
+                }
+
                 font-size: 18px;
                 padding-inline: 10px;
                 user-select: none;
@@ -199,6 +241,10 @@
             }
 
             .input_code {
+                @media screen and (max-width:320px) {
+                    padding: 10px 0
+                }
+
                 width: 100px;
                 padding: 11px 10px;
                 font-size: 14px;
@@ -208,6 +254,11 @@
             }
 
             .send_comment {
+                @media screen and (max-width:320px) {
+                    padding: 10px 8px;
+                    font-size: 14px;
+                }
+
                 background-color: $main2;
                 color: #fff;
                 border-radius: 40px;
@@ -220,6 +271,7 @@
                 font-family: dana5;
                 cursor: pointer;
                 transition: all 0.3s;
+                white-space: nowrap;
 
                 .icon {
                     font-size: 24px;
@@ -234,6 +286,10 @@
     }
 
     .comment_reactions {
+        @media screen and (max-width:425px) {
+            width: 100%;
+        }
+
         text-align: center;
         width: max-content;
         margin: 0 auto;
@@ -255,6 +311,10 @@
         }
 
         .star {
+            @media screen and (max-width:425px) {
+                width: 100px;
+            }
+
             width: 391px;
             position: absolute;
             right: 50%;
@@ -293,6 +353,10 @@
                 }
 
                 .icon {
+                    @media screen and (max-width:320px) {
+                        font-size: 35px;
+                    }
+
                     font-size: 60px;
                 }
 
@@ -340,6 +404,10 @@
             }
 
             &::before {
+                @media screen and (max-width:320px) {
+                    width: 100%;
+                }
+
                 content: "";
                 position: absolute;
                 bottom: 0;
@@ -389,6 +457,10 @@
             }
 
             .user_stay {
+                @media screen and (max-width:320px) {
+                    padding: 20px 0px;
+                }
+
                 background-color: $light_bg;
                 display: flex;
                 align-items: center;
@@ -428,6 +500,10 @@
                     margin-bottom: 25px;
 
                     .title {
+                        @media screen and (max-width:425px) {
+                            font-size: 16px;
+                        }
+
                         font-size: 19px;
                         width: 145px;
                     }
@@ -448,19 +524,54 @@
                 justify-content: space-between;
 
                 .title {
+                    @media screen and (max-width:1440px) {
+                        font-size: 18px;
+                    }
+
+                    @media screen and (max-width:1024px) {
+                        font-size: 15px;
+                    }
+
+                    // @media screen and (max-width:425px) {
+                    //     font-size: 15px;
+                    // }
+
                     font-size: 22px;
                     font-weight: 200;
                 }
 
                 .action {
+                    @media screen and (max-width:1024px) {
+                        margin-left: 0;
+                    }
+
                     margin-left: 35px;
+                    white-space: nowrap;
+
 
                     .link {
                         .icon {
+
+                            @media screen and (max-width:1440px) {
+                                font-size: 22px;
+                            }
+
+                            @media screen and (max-width:1024px) {
+                                font-size: 20px;
+                            }
+
+                            @media screen and (max-width:425px) {
+                                font-size: 16px;
+                            }
+
                             font-size: 30px;
                             color: $main;
 
                             &.icon-dislike {
+                                @media screen and (max-width:1024px) {
+                                    margin-right: 10px;
+                                }
+
                                 margin-right: 30px;
                                 color: $main2;
                             }

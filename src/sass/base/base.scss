@@ -192,7 +192,19 @@ select {
 }
 
 .send_message {
+  @media screen and (max-width:375px) {
+    margin-bottom: 115px;
+  }
+
+  overflow: hidden;
   margin-bottom: 200px;
+
+  .card {
+    @media screen and (max-width:768px) {
+      flex-direction: column-reverse;
+      gap: 80px;
+    }
+  }
 
   .info {
     position: relative;
@@ -229,6 +241,11 @@ select {
       }
 
       .bottom {
+        @media screen and (max-width:375px) {
+          flex-direction: column;
+          gap: 10px;
+        }
+
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -237,6 +254,10 @@ select {
         border-radius: 12px;
 
         .right {
+          @media screen and (max-width:375px) {
+            width: 100%;
+          }
+
           display: flex;
           align-items: center;
           background-color: #ffffff;
@@ -269,6 +290,14 @@ select {
         }
 
         .submit {
+          @media screen and (max-width:768px) {
+            white-space: nowrap;
+          }
+
+          @media screen and (max-width:375px) {
+            width: 100%;
+          }
+
           @include link_btn($main2, 12px 16px, 22px, 100, 19px, 10px);
         }
       }
@@ -298,6 +327,16 @@ select {
     }
 
     .icon {
+      @media screen and (max-width:1024px) {
+        top: 20px;
+        right: 20px;
+      }
+
+      @media screen and (max-width:768px) {
+        top: 6px;
+        right: 6px;
+      }
+
       color: $main2;
       position: absolute;
       top: 40px;

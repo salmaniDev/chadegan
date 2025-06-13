@@ -37,6 +37,11 @@
     font-weight: $fontWeight;
 
     .icon {
+        @media screen and (max-width:1024px) {
+            font-size: 16px;
+            margin-right: 5px;
+        }
+
         font-size: $iconSize;
         margin-right: $marginRightIcon;
     }
@@ -80,12 +85,21 @@
 
 
     .item {
+        @media screen and (max-width:1440px) {
+            padding-left: 40px;
+        }
+
         display: flex;
         align-items: center;
         padding-block: 10px;
         padding-left: 90px;
+        white-space: nowrap;
 
         &:not(:first-child) {
+            @media screen and (max-width:1440px) {
+                margin-right: 40px;
+            }
+
             margin-right: 85px;
         }
 
@@ -106,6 +120,10 @@
         }
 
         &:nth-child(3) {
+            @media screen and (max-width:1440px) {
+                flex: 0;
+            }
+
             padding-left: 0;
             flex: 1;
 
@@ -146,6 +164,11 @@
     }
 
     .search {
+        @media screen and (max-width:1440px) {
+            margin-right: 40px;
+        }
+
+        white-space: nowrap;
         background-color: $main2;
         color: #fff;
         border-radius: 40px;
@@ -400,6 +423,11 @@
         }
 
         .icon {
+            @media screen and (max-width:768px) {
+                font-size: 25px;
+                margin-left: 10px;
+            }
+
             font-size: 40px;
             margin-left: 15px;
         }
@@ -413,6 +441,10 @@
             }
 
             .desc {
+                @media screen and (max-width:1024px) {
+                    font-size: 17px;
+                }
+
                 font-size: 22px;
             }
         }
@@ -450,6 +482,8 @@
 }
 
 @mixin user_comment_item {
+
+
     &:not(:last-child) {
         border-bottom: 1px solid $border8;
         margin-bottom: 30px;
@@ -485,6 +519,9 @@
                         align-items: center;
 
                         .icon {
+                            @media screen and (max-width:425px) {
+                                margin-left: 0;
+                            }
                             color: #0C6FCC;
                             font-size: 15px;
                             margin-left: 20px;
@@ -771,6 +808,11 @@
 }
 
 @mixin contact_box {
+    @media screen and (max-width:425px) {
+        position: relative;
+        top: 295px;
+    }
+
     border-radius: 23px;
     padding: 66px 27px 22px;
     background-color: #fff;
@@ -781,6 +823,10 @@
         margin-bottom: 16px;
 
         &::after {
+            @media screen and (max-width:425px) {
+                width: 100%;
+            }
+
             content: "";
             position: absolute;
             top: -20px;
@@ -794,6 +840,10 @@
         }
 
         .item {
+            @media screen and (max-width:768px) {
+                padding: 27px 15px;
+            }
+
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -809,6 +859,10 @@
             }
 
             .num {
+                @media screen and (max-width:768px) {
+                    font-size: 16px;
+                }
+
                 font-size: 23px;
             }
         }
@@ -878,6 +932,10 @@
         }
 
         .box:nth-child(4) {
+            @media screen and (max-width:1440px) {
+                flex-direction: column;
+            }
+
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -885,6 +943,10 @@
             padding: 0;
 
             .box-code {
+                @media screen and (max-width:768px) {
+                    width: 100%;
+                }
+
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -915,6 +977,11 @@
             }
 
             .btn {
+                @media screen and (max-width:1024px) {
+                    margin-right: 0;
+                    width: 100%;
+                }
+
                 background-color: $main2;
                 color: #fff;
                 border-radius: 40px;
@@ -926,6 +993,7 @@
                 margin-right: auto;
                 font-family: dana5;
                 cursor: pointer;
+                white-space: nowrap;
 
                 .icon {
                     font-size: 21px;
@@ -977,6 +1045,14 @@
         margin-inline: auto;
 
         .items {
+            @media screen and (max-width:1024px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media screen and (max-width:425px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
             display: grid;
             justify-items: start;
             grid-gap: 0;
@@ -985,6 +1061,10 @@
             margin-bottom: 80px;
 
             .item {
+                @media screen and (max-width:768px) {
+                    padding-right: 15px;
+                }
+
                 width: 100%;
                 display: block;
                 position: relative;
@@ -1008,12 +1088,20 @@
                     .info {
 
                         .title {
+                            @media screen and (max-width:768px) {
+                                font-size: 18px;
+                            }
+
                             font-weight: 200;
                             margin-bottom: 3px;
                             font-size: 20px;
                         }
 
                         .en {
+                            @media screen and (max-width:768px) {
+                                font-size: 16px;
+                            }
+
                             color: $desc4;
                             font-size: 20px;
                         }
@@ -1024,6 +1112,10 @@
                     display: flex;
 
                     .desc {
+                        @media screen and (max-width:768px) {
+                            font-size: 15px;
+                        }
+
                         color: $desc4;
                         font-size: 17px;
                         display: flex;
@@ -1031,6 +1123,10 @@
                         font-weight: 100;
 
                         &:first-child {
+                            @media screen and (max-width:768px) {
+                                margin-left: 12px;
+                            }
+
                             margin-left: 60px;
                         }
 
@@ -1043,6 +1139,10 @@
                 }
 
                 >.icon {
+                    @media screen and (max-width:768px) {
+                        left: 12px;
+                    }
+
                     position: absolute;
                     left: 30px;
                     color: $desc4;
@@ -1268,7 +1368,8 @@
             line-height: 3;
             color: $desc4;
             margin-bottom: 40px;
-            font-size: 21px
+            font-size: 21px;
+            text-align: justify
         }
 
         .link {
@@ -1279,7 +1380,12 @@
     }
 
     .item {
+        @media screen and (max-width:425px) {
+            margin-top: 40px;
+        }
+
         position: relative;
+
 
         .image {
             mask-image: url('/image/mask/1.svg');
@@ -1332,6 +1438,10 @@
         }
 
         .star {
+            @media screen and (max-width:425px) {
+                left: 40px;
+            }
+
             position: absolute;
             left: -45px;
             bottom: -35px;

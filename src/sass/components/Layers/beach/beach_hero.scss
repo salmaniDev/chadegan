@@ -2,8 +2,14 @@
     margin-top: 230px;
 
     .box {
+        @media screen and (max-width: 1024px) {
+            width: 100%;
+            transform: translateX(0);
+        }
+
         display: flex;
         width: max-content;
+        justify-content: center;
         margin: 0 auto;
         align-items: center;
         position: relative;
@@ -36,6 +42,10 @@
         }
 
         >.link {
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+
             @include link_btn(#ffffff, 17px 13px 17px 25px, 21px, 200, 12px, 0);
             color: $main2;
             margin-bottom: 75px;
@@ -50,6 +60,10 @@
             position: relative;
 
             .image {
+                @media screen and (max-width: 425px) {
+                    width: 100%;
+                }
+
                 width: 480px;
                 height: 610px;
                 border-radius: 23px;
@@ -57,17 +71,27 @@
             }
 
             .flot_image {
+
                 position: absolute;
                 width: 127px;
                 height: 127px;
                 border-radius: 23px;
 
                 &.after {
+                    @media screen and (max-width: 425px) {
+                        left: 12px;
+                    }
+
                     top: 23px;
                     left: -90px;
                 }
 
                 &.before {
+                    @media screen and (max-width: 425px) {
+                        bottom: 25px;
+                        right: 10px;
+                    }
+
                     bottom: 143px;
                     right: -70px;
                 }
@@ -75,10 +99,22 @@
         }
 
         .info {
+            @media screen and (max-width: 768px) {
+                margin-right: 0;
+                margin-top: 0;
+                position: absolute;
+                top: -110px;
+                text-align: center;
+            }
+
             margin-right: 30px;
             margin-top: 35px;
 
             .title {
+                @media screen and (max-width: 1024px) {
+                    font-size: 22px;
+                }
+
                 color: $main2;
                 font-size: 41px;
                 margin-bottom: 45px;
@@ -90,6 +126,10 @@
             }
 
             .link {
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+
                 @include link_btn(#ffffff, 17px 25px 17px 13px, 21px, 200, 12px, 17px);
                 color: $main2;
 
@@ -107,6 +147,10 @@
             }
 
             &.bottom {
+                @media screen and (max-width: 1024px) {
+                    right: -15px;
+                }
+
                 bottom: 0px;
                 right: -60px;
             }

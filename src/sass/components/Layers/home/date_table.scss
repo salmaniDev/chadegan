@@ -62,6 +62,8 @@
         .box {
             padding-right: 35px;
             padding-block: 14px;
+            overflow-x: auto;
+            white-space: nowrap;
 
             .item {
                 padding-left: 35px;

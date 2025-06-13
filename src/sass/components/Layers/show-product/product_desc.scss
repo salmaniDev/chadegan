@@ -1,6 +1,11 @@
 .product_desc {
     margin-bottom: 150px;
 
+    .card {
+        // flex-direction: column;
+        // gap: 70px;
+    }
+
     .product_desc_info {
         >.title {
             font-size: 30px;
@@ -12,6 +17,7 @@
             font-size: 18px;
             line-height: 75px;
             margin-bottom: 30px;
+            text-align: justify;
         }
 
         .details_title {
@@ -21,6 +27,14 @@
         }
 
         .product_details {
+            @media screen and (max-width:768px) {
+                width: 100%;
+            }
+
+            @media screen and (max-width:320px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-row-gap: 50px;
@@ -34,12 +48,23 @@
                 }
 
                 .icon {
+                    @media screen and (max-width:425px) {
+                        font-size: 25px;
+                        margin-left: 5px;
+                    }
+
                     font-size: 38px;
                     margin-left: 18px;
                     display: inline-block;
                 }
 
                 .title {
+                    .user_comments {
+                        @media screen and (max-width:425px) {
+                            font-size: 15px;
+                        }
+                    }
+
                     font-size: 19px;
                 }
             }
@@ -47,10 +72,23 @@
     }
 
     .product_payment {
+        @media screen and (max-width:768px) {
+            position: relative;
+            top: 80px;
+        }
+
         position: sticky;
         top: 140px;
 
         >.info {
+            @media screen and (max-width:1024px) {
+                padding-right: 50px;
+            }
+
+            @media screen and (max-width:320px) {
+                padding: 10px;
+            }
+
             padding: 25px;
             padding-right: 75px;
             background-image: url('/image/mask/2.svg');
@@ -74,6 +112,10 @@
 
 
             &::after {
+                @media screen and (max-width:320px) {
+                    width: 100%;
+                }
+
                 content: "";
                 position: absolute;
                 top: 35px;
@@ -108,10 +150,18 @@
 
                 p {
                     &.title {
+                        @media screen and (max-width:1024px) {
+                            font-size: 18px;
+                        }
+
                         font-size: 22px;
                     }
 
                     &.price {
+                        @media screen and (max-width:1024px) {
+                            font-size: 18px;
+                        }
+
                         color: $main2;
                         font-size: 24px;
 
@@ -132,6 +182,11 @@
                     padding: 16px;
 
                     .icon {
+                        @media screen and (max-width:1024px) {
+                            font-size: 25px;
+                            margin-left: 10px;
+                        }
+
                         margin-left: 31px;
                     }
                 }
@@ -144,6 +199,10 @@
                 margin-bottom: 50px;
 
                 .title {
+                    @media screen and (max-width:1024px) {
+                        font-size: 17px;
+                    }
+
                     font-size: 27px;
                 }
 
@@ -151,11 +210,20 @@
                     margin-right: 29px;
 
                     .icon {
+                        @media screen and (max-width:1024px) {
+                            font-size: 30px;
+                        }
+
                         color: $main2;
                         font-size: 35px;
                     }
 
                     .num {
+                        @media screen and (max-width:1024px) {
+                            font-size: 17px;
+                            margin: 0 15px;
+                        }
+
                         display: inline-block;
                         font-size: 28px;
                         margin: 0 25px;
@@ -169,6 +237,10 @@
                 justify-content: space-between;
 
                 .price {
+                    @media screen and (max-width:1024px) {
+                        font-size: 30px;
+                    }
+
                     color: $main;
                     font-size: 47px;
 
@@ -179,7 +251,12 @@
                 }
 
                 .link {
-                    @include link_btn($main2 , 13px 20px , 22px , 100 , 19px , 35px);
+                    @media screen and (max-width:1024px) {
+                        font-size: 17px;
+                    }
+
+                    @include link_btn($main2 , 13px 20px, 22px, 100, 19px, 35px);
+                    white-space: nowrap;
                 }
             }
 

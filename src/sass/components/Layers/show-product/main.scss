@@ -5,6 +5,12 @@
 @import './product_desc.scss';
 
 
-.comments_holder{
+.comments_holder {
     margin-bottom: 150px;
+
+    .user_comments {
+        @media screen and (max-width:768px) {
+            margin-top: 80px;
+        }
+    }
 }

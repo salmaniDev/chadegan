@@ -1,5 +1,10 @@
 .show_post_content {
-    
+    .card {
+        @media screen and (max-width:768px) {
+            flex-direction: column-reverse;
+        }
+    }
+
     .post_action {
         .reactions {
             position: relative;
@@ -98,6 +103,10 @@
                         }
 
                         .icon {
+                            @media screen and (max-width:768px) {
+                                font-size: 26px;
+                            }
+
                             font-size: 50px;
                         }
                     }
@@ -153,6 +162,7 @@
 
                 .link {
                     @include link_btn($main2);
+                    white-space: nowrap;
 
                     .icon {
                         margin-right: 7px;
@@ -249,6 +259,10 @@
                     }
 
                     >.icon {
+                        @media screen and (max-width:425px) {
+                            margin-right: 20px;
+                        }
+
                         color: $desc4;
                         margin-right: 46px;
                         font-size: 18px;
@@ -260,16 +274,25 @@
 
     .content {
         .title {
+            @media screen and (max-width:425px) {
+                font-size: 25px;
+            }
+
             font-size: 32px;
             margin-bottom: 10px;
             font-weight: 200;
         }
 
         p {
+            @media screen and (max-width:425px) {
+                font-size: 16px;
+            }
+
             font-size: 20px;
             color: $desc2;
             line-height: 90px;
             margin-bottom: 15px;
+            text-align: justify;
         }
 
         .significant {
@@ -297,6 +320,10 @@
             }
 
             p {
+                @media screen and (max-width:425px) {
+                    font-size: 16px;
+                }
+
                 line-height: 2.7;
                 font-size: 20px;
                 line-height: 55px;
@@ -320,15 +347,25 @@
             border-radius: 12px;
 
             .title {
+                @media screen and (max-width:425px) {
+                    font-size: 16px;
+                }
+
                 font-weight: 100;
                 font-size: 26px;
             }
 
             .actions {
+                white-space: nowrap;
+
                 .link {
                     font-size: 20px;
 
                     &:first-child {
+                        @media screen and (max-width:425px) {
+                            margin-right: 25px;
+                        }
+
                         margin-right: 45px;
                         color: $main2;
                     }
@@ -338,6 +375,10 @@
                     }
 
                     .icon {
+                        @media screen and (max-width:425px) {
+                            font-size: 20px;
+                        }
+
                         font-size: 30px;
                     }
                 }

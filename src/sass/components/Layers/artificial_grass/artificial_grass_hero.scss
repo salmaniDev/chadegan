@@ -1,12 +1,13 @@
 .artificial_grass_hero {
     margin-top: 160px;
+    overflow: hidden;
 
     .box {
         position: relative;
 
         .main_image {
             width: 100%;
-            object-fit: none;
+            object-fit: cover;
             border-radius: 15px;
             object-position: center top;
         }
@@ -20,6 +21,29 @@
             height: 100%;
 
             .title {
+                @media screen and (max-width:1024px) {
+                    top: 6.5rem;
+                }
+
+                @media screen and (max-width:768px) {
+                    font-size: 20px;
+                    left: 50px;
+                    top: 3.5rem;
+                }
+
+                @media screen and (max-width:425px) {
+                    left: 180px;
+                }
+
+                @media screen and (max-width:375px) {
+                    top: 2.5rem;
+                }
+
+                @media screen and (max-width:320px) {
+                    top: 1.5rem;
+                    left: 210px;
+                }
+
                 color: #fff;
                 position: absolute;
                 left: 0;
@@ -27,6 +51,10 @@
                 top: 12.5rem;
 
                 p {
+                    @media screen and (max-width:768px) {
+                        font-size: 20px;
+                    }
+
                     font-size: 37px;
                     font-weight: 200;
                     padding-top: 10px;
@@ -38,12 +66,32 @@
                 position: absolute !important;
 
                 &.left {
+                    @media screen and (max-width:1440px) {
+                        bottom: 1rem;
+                    }
+
+                    @media screen and (max-width:768px) {
+                        left: 8.5rem;
+                    }
+
+                    @media screen and (max-width:425px) {
+                        display: none;
+                    }
+
                     @include link_btn(#ffffff, 17px 25px 17px 13px, 21px, 200, 12px, 17px);
                     bottom: 5rem;
                     left: 12.5rem;
                 }
 
                 &.right {
+                    @media screen and (max-width:768px) {
+                        bottom: 3.5rem;
+                    }
+
+                    @media screen and (max-width:425px) {
+                        display: none;
+                    }
+
                     @include link_btn(#ffffff, 17px 13px 17px 25px, 21px, 200, 12px, 0);
                     right: -5px;
                     bottom: 15.5rem;
@@ -71,6 +119,14 @@
             }
 
             .heart {
+                @media screen and (max-width:1440px) {
+                    bottom: 14.5rem;
+                }
+
+                @media screen and (max-width:768px) {
+                    display: none;
+                }
+
                 position: absolute;
                 left: 19.8rem;
                 color: $red;

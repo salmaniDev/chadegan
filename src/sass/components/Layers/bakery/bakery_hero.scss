@@ -1,5 +1,10 @@
 .bakery_hero {
+    @media screen and (max-width: 768px) {
+        margin-top: 130px;
+    }
+
     margin-top: 200px;
+    overflow: hidden;
     margin-bottom: 100px;
 
     .box {
@@ -23,17 +28,55 @@
 
         .main_image {
             position: relative;
-            
+
+            .image {
+                width: 100%;
+            }
 
             .float_image {
                 position: absolute;
 
                 &.right {
+                    @media screen and (max-width:768px) {
+                        right: 4.7rem;
+                        top: 0.3rem;
+                    }
+
+                    @media screen and (max-width: 425px) {
+                        right: 3rem;
+                        width: 18%;
+                    }
+
+                    @media screen and (max-width: 320px) {
+                        right: 2.5rem;
+                    }
+
                     right: 9.7rem;
                     top: 3.3rem;
                 }
 
                 &.left {
+                    @media screen and (max-width:768px) {
+                        bottom: 2.3rem;
+                        left: 2.9rem;
+                    }
+
+                    @media screen and (max-width: 425px) {
+                        bottom: 1.6rem;
+                        left: 3.9rem;
+                        width: 14%;
+                    }
+
+                    @media screen and (max-width: 375px) {
+                        bottom: 1.35rem;
+                        left: 3.5rem;
+                    }
+
+                    @media screen and (max-width: 320px) {
+                        bottom: 1.12rem;
+                        left: 2.9rem;
+                    }
+
                     bottom: 3.3rem;
                     left: 8.9rem;
                 }
@@ -41,6 +84,22 @@
         }
 
         >.title {
+            @media screen and (max-width:1024px) {
+                font-size: 22px;
+                left: 0;
+            }
+
+            @media screen and (max-width: 768px) {
+                left: -25px;
+            }
+
+            @media screen and (max-width: 425px) {
+                left: 0;
+                width: 100%;
+                text-align: center;
+                bottom: 10rem;
+            }
+
             color: $main2;
             font-size: 38px;
             position: absolute;
@@ -48,6 +107,10 @@
             bottom: 19rem;
 
             p {
+                @media screen and (max-width:1024px) {
+                    font-size: 22px;
+                }
+
                 color: $black;
                 padding-top: 10px;
                 font-size: 37px;
@@ -55,6 +118,11 @@
         }
 
         .audio_desc {
+            @media screen and (max-width: 425px) {
+                width: 95%;
+                margin-top: 140px;
+            }
+
             @include audio_desc;
             width: 563px;
             background-color: #ffffff;
@@ -86,12 +154,25 @@
             position: absolute !important;
 
             &.left {
+                @media screen and (max-width:768px) {
+                    top: 7.5rem;
+                    left: 7.8rem;
+                }
+
+                @media screen and (max-width:425px) {
+                    display: none;
+                }
+
                 @include link_btn(#ffffff, 17px 25px 17px 13px, 21px, 200, 12px, 17px);
                 top: 12.5rem;
                 left: 9.8rem;
             }
 
             &.right {
+                @media screen and (max-width:425px) {
+                    display: none;
+                }
+
                 @include link_btn(#ffffff, 17px 13px 17px 25px, 21px, 200, 12px, 0);
                 bottom: 10rem;
                 right: 10rem;
@@ -109,5 +190,6 @@
         line-height: 90px;
         margin-top: 45px;
         margin-inline: auto;
+        text-align: justify;
     }
 }

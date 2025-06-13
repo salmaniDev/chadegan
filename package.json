@@ -16,6 +16,7 @@
   "dependencies": {
     "i": "^0.3.7",
     "jquery": "^3.7.1",
+    "leaflet": "^1.9.4",
     "npm": "^10.4.0",
     "sass": "^1.86.3",
     "slick-carousel": "^1.8.1",

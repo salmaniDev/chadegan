@@ -24,6 +24,9 @@
                 align-items: center;
 
                 .rating-label {
+                    @media screen and (max-width:425px) {
+                        font-size: 16px;
+                    }
                     font-weight: 200;
                     font-size: 18px;
                     font-family: 'dana5';
@@ -36,6 +39,9 @@
                     gap: 5px;
 
                     .star {
+                        @media screen and (max-width:425px) {
+                            font-size: 16px;
+                        }
                         font-size: 20px;
                         margin-right: 4px;
                         color: #ededed;
@@ -55,6 +61,11 @@
         }
 
         .upload-wrapper {
+            @media screen and (max-width:425px) {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
             display: flex;
             align-items: center;
             gap: 15px;
@@ -62,6 +73,7 @@
             padding: 18px 10px;
             border-radius: 12px;
             margin-bottom: 20px;
+            position: relative;
 
             .text {
                 font-size: 16px;
@@ -71,6 +83,10 @@
             }
 
             .file-names {
+                @media screen and (max-width:425px) {
+                    position: absolute;
+                    bottom: -6px;
+                }
                 font-size: 12px;
                 font-weight: 300;
                 color: $black;

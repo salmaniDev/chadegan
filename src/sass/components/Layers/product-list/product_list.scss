@@ -12,26 +12,63 @@
     }
 
     .filter_menu {
+        @media screen and (max-width:425px) {
+            margin: 100px 0 30px;
+            justify-content: center;
+            gap: 40px;
+        }
+
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin: 0 45px;
         margin-bottom: 70px;
+        gap: 15px;
+        position: relative;
 
         .day_info {
+            white-space: nowrap;
             @include weather_item;
         }
 
         .box {
+            @media screen and (max-width:1440px) {
+                justify-content: center;
+            }
+
+            @media screen and (max-width:1024px) {
+                justify-content: start;
+                overflow: auto;
+            }
+
+            @media screen and (max-width:425px) {
+                width: 100%;
+                position: absolute;
+                top: -140px;
+                right: 0;
+            }
+
             @include data_table_box;
             width: 75.333333%;
         }
 
         .filters {
+            @media screen and (max-width:1024px) {
+                gap: 20px;
+            }
+
+            @media screen and (max-width:425px) {
+                gap: 40px;
+            }
+
             display: flex;
 
             .item {
                 &:last-child {
+                    @media screen and (max-width:1024px) {
+                        margin-right: 0;
+                    }
+
                     margin-right: 60px;
                 }
 
@@ -58,6 +95,14 @@
     }
 
     .items {
+        @media screen and (max-width:1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (max-width:425px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
         display: grid;
         justify-items: start;
         grid-gap: 25px;
@@ -177,19 +222,30 @@
             }
 
             >.bottom {
+                @media screen and (max-width:768px) {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
 
                 .right {
+                    @media screen and (max-width:768px) {
+                        margin-left: 0;
+                    }
+
                     display: flex;
                     align-items: center;
                     background-color: $light_bg;
                     border-radius: 15px;
-                    padding: 25px 10px;
+                    padding: 30px 10px;
                     flex: 1;
                     padding-right: 30px;
                     margin-left: 15px;
+                    width: 100%;
+                    white-space: nowrap;
                     justify-content: space-between;
 
                     p {
@@ -214,10 +270,17 @@
                 }
 
                 .link {
+                    @media screen and (max-width:768px) {
+                        padding: 20px 10px;
+                    }
+
                     background-color: $light_bg;
-                    padding: 25px 35px;
+                    padding: 30px 10px;
+                    width: 100%;
+                    text-align: center;
                     border-radius: 15px;
-                    font-size: 18px;
+                    font-size: 16px;
+                    white-space: nowrap;
                     transition: $transition;
                 }
             }
@@ -243,6 +306,14 @@
             }
 
             >.info {
+                @media screen and (max-width:768px) {
+                    bottom: 100px;
+                }
+
+                @media screen and (max-width:425px) {
+                    // bottom: 40px;
+                }
+
                 position: absolute;
                 bottom: 18px;
                 background-color: #fff;
@@ -258,6 +329,13 @@
                     justify-content: end;
 
                     P {
+                        @media screen and (max-width:768px) {
+                            font-size: 15px;
+                        }
+
+                        width: 100%;
+                        text-align: center;
+                        white-space: nowrap;
                         font-size: 17px;
                         border-radius: 7px;
                         padding: 13px;
@@ -290,6 +368,11 @@
             }
 
             >.action {
+                @media screen and (max-width:1440px) {
+                    top: -12px;
+                    right: 5px;
+                }
+
                 position: absolute;
                 top: 0;
                 right: 20px;

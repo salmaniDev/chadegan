@@ -1,13 +1,32 @@
 .boating_hero {
     margin-top: 105px;
+    overflow: hidden;
 
     .box {
+        @media screen and (max-width: 1024px) {
+            width: 100%;
+        }
+
         width: 1309px;
         margin-inline: auto;
 
         .hero_info {
+            @media screen and (max-width: 768px) {
+                margin-bottom: 165px;
+            }
+
+            @media screen and (max-width: 375px) {
+                margin-bottom: 225px;
+            }
+
             position: relative;
             transform: translateX(10px);
+
+            .main_image {
+                @media screen and (max-width: 1024px) {
+                    width: 100%;
+                }
+            }
 
             &::after {
                 content: "";
@@ -38,6 +57,22 @@
             .main_image {}
 
             >.title {
+                @media screen and (max-width: 1024px) {
+                    top: 25.4rem;
+                }
+
+                @media screen and (max-width: 768px) {
+                    top: 23.4rem;
+                    left: 0;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                @media screen and (max-width: 425px) {
+                    top: 14.4rem;
+                    font-size: 22px;
+                }
+
                 color: $main2;
                 font-size: 38px;
                 position: absolute;
@@ -46,6 +81,10 @@
                 z-index: 2;
 
                 p {
+                    @media screen and (max-width: 425px) {
+                        font-size: 22px;
+                    }
+
                     color: $black;
                     padding-top: 10px;
                     font-size: 37px;
@@ -58,12 +97,28 @@
                 z-index: 2;
 
                 &.left {
+                    @media screen and (max-width: 1024px) {
+                        left: 0;
+                    }
+
+                    @media screen and (max-width: 425px) {
+                        display: none;
+                    }
+
                     @include link_btn(#ffffff, 17px 25px 17px 13px, 21px, 200, 12px, 17px);
                     bottom: 16rem;
                     left: 23rem;
                 }
 
                 &.right {
+                    @media screen and (max-width: 1024px) {
+                        right: 0;
+                    }
+
+                    @media screen and (max-width: 425px) {
+                        display: none;
+                    }
+
                     @include link_btn(#ffffff, 17px 13px 17px 25px, 21px, 200, 12px, 0);
                     top: 21.7rem;
                     right: 25.3rem;
@@ -75,6 +130,29 @@
             }
 
             .audio_desc {
+                @media screen and (max-width: 1024px) {
+                    bottom: 0;
+                }
+
+                @media screen and (max-width: 768px) {
+                    bottom: -130px;
+                }
+
+                @media screen and (max-width: 425px) {
+                    bottom: -175px;
+                    width: 100%;
+                    right: 10px;
+                    transform: translateX(0);
+                }
+
+                @media screen and (max-width: 375px) {
+                    bottom: -210px;
+                }
+
+                @media screen and (max-width: 320px) {
+                    bottom: -240px;
+                }
+
                 width: 563px;
                 background-color: #ffffff;
                 border-radius: 13px;

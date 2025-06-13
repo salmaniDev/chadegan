@@ -1,9 +1,18 @@
 .beach_desc {
+    @media screen and (max-width: 425px) {
+        padding-top: 65px;
+    }
+
     padding-top: 150px;
     margin-bottom: 60px;
     position: relative;
 
     &::after {
+        @media screen and (max-width: 768px) {
+            right: 0;
+            width: 100%;
+        }
+
         content: "";
         position: absolute;
         top: 0;
@@ -30,16 +39,22 @@
     }
 
     .audio_desc {
+        @media screen and (max-width: 425px) {
+            width: 100%;
+        }
+
         width: 500px;
         margin-inline: auto;
         @include audio_desc;
 
 
     }
+
     .main_desc {
         font-size: 20px;
         color: $desc4;
         line-height: 90px;
-        margin-top: 200px;
+        margin-top: 65px;
+        text-align: justify;
     }
 }

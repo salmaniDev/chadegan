@@ -19,11 +19,34 @@
     }
 
     li {
+        @media screen and (max-width:425px) {
+
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5) {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:320px) {
+
+            &:nth-child(7) {
+                display: none;
+            }
+        }
+
         &:not(:last-child) {
             margin-left: 10px;
         }
 
         .link {
+            @media screen and (max-width:425px) {
+                width: 45px;
+                height: 45px;
+                padding: 10px;
+                font-size: 16px;
+            }
+
             background-color: #fff;
             border-radius: 50%;
             width: 63px;
@@ -51,7 +74,7 @@
             }
 
             &.arrow {
-                width: 149px;
+                width: min-content;
                 border-radius: 41px;
                 color: #000;
                 justify-content: end;
@@ -64,22 +87,43 @@
                 }
 
                 &.prev {
+                    @media screen and (max-width:425px) {
+                        font-size: 14px;
+                    }
+
                     padding-left: 8px;
 
                     .icon {
+                        @media screen and (max-width:425px) {
+                            margin-right: 5px;
+                        }
+
                         margin-right: 21px;
                     }
                 }
 
                 &.next {
+                    @media screen and (max-width:425px) {
+                        font-size: 14px;
+                    }
+
                     padding-right: 8px;
 
                     .icon {
+                        @media screen and (max-width:425px) {
+                            margin-left: 5px;
+                        }
+
                         margin-left: auto;
                     }
                 }
 
                 .icon {
+                    @media screen and (max-width:425px) {
+                        padding: 10px;
+                        font-size: 16px;
+                    }
+
                     background-color: #F5F9FD;
                     color: $main2;
                     padding: 16px;

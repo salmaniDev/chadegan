@@ -19,6 +19,16 @@
     }
 
     .actions {
+        @media screen and (max-width:1024px) {
+            margin-inline: 0;
+            grid-gap: 30px;
+        }
+
+        @media screen and (max-width:425px) {
+            grid-gap: 40px;
+            grid-template-columns: repeat(1, 1fr);    
+        }
+
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin: 0 35px;
@@ -32,10 +42,15 @@
             width: 100%;
 
             .right {
+                white-space: nowrap;
                 display: flex;
                 align-items: center;
 
                 .icon {
+                    @media screen and (max-width:1024px) {
+                        font-size: 30px;
+                    }
+
                     color: $main2;
                     font-size: 45px;
                 }
@@ -44,6 +59,10 @@
                     margin-right: 25px;
 
                     p {
+                        @media screen and (max-width:1024px) {
+                            font-size: 18px;
+                        }
+
                         font-size: 24px;
 
                         &.desc {}

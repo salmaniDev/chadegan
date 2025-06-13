@@ -1,11 +1,14 @@
 .bowling_hero {
     margin-top: 150px;
+    overflow: hidden;
 
     .box {
         position: relative;
+
         .main_image {
             width: 100%;
-            object-fit: none;
+            object-fit: cover;
+            aspect-ratio: 1 / 0.23;
             border-radius: 15px;
         }
 
@@ -18,6 +21,27 @@
             height: 100%;
 
             .title {
+
+                @media screen and (max-width:1440px) {
+                    left: -150px;
+                }
+
+                @media screen and (max-width:1024px) {
+                    top: 3rem;
+                    left: -18px;
+                }
+
+                @media screen and (max-width:768px) {
+                    font-size: 22px;
+                    top: 1rem;
+                    left: 30px;
+                }
+
+                @media screen and (max-width:425px) {
+                    font-size: 18px;
+                    left: 140px;
+                }
+
                 color: #fff;
                 position: absolute;
                 left: 0;
@@ -25,6 +49,14 @@
                 top: 10rem;
 
                 p {
+                    @media screen and (max-width:768px) {
+                        font-size: 22px;
+                    }
+
+                    @media screen and (max-width:425px) {
+                        font-size: 18px;
+                    }
+
                     font-size: 37px;
                     padding-top: 10px;
                 }
@@ -36,12 +68,38 @@
                 z-index: 2;
 
                 &.left {
+                    @media screen and (max-width:1024px) {
+                        bottom: 4rem;
+                        left: -7.5rem;
+                    }
+
+                    @media screen and (max-width:768px) {
+                        bottom: 0.5rem;
+                        left: 7.5rem;
+                    }
+
+                    @media screen and (max-width:425px) {
+                        display: none;
+                    }
+
                     @include link_btn(#ffffff, 17px 25px 17px 13px, 21px, 200, 12px, 17px);
                     bottom: 6rem;
                     left: 12.5rem;
                 }
 
                 &.right {
+                    @media screen and (max-width:1024px) {
+                        bottom: 8.7rem;
+                    }
+
+                    @media screen and (max-width:768px) {
+                        bottom: 4.7rem;
+                    }
+
+                    @media screen and (max-width:425px) {
+                        display: none;
+                    }
+
                     @include link_btn(#ffffff, 17px 13px 17px 25px, 21px, 200, 12px, 0);
                     right: 0.5rem;
                     bottom: 11.7rem;
@@ -75,12 +133,20 @@
                 border-radius: 50%;
 
                 &.left {
+                    @media screen and (max-width:425px) {
+                        display: none;
+                    }
+
                     transform: rotate(-32deg);
                     top: 1.5rem;
                     left: 16.8rem;
                 }
 
                 &.right {
+                    @media screen and (max-width:425px) {
+                        display: none;
+                    }
+
                     transform: rotate(40deg);
                     top: 8.3rem;
                     right: 8.3rem;
