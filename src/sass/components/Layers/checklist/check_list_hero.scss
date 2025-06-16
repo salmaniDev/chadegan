@@ -1,4 +1,9 @@
 .check_list_hero {
+    @media screen and (max-width:768px) {
+        padding-top: 30px;
+        margin-bottom: 90px;
+    }
+
     position: relative;
     padding-top: 70px;
     margin-top: 142px;
@@ -7,10 +12,18 @@
 
     .info {
         .title {
+            @media screen and (max-width:1440px) {
+                font-size: 50px;
+            }
+
             font-size: 84px;
             margin-bottom: 5px;
 
             p {
+                @media screen and (max-width:1440px) {
+                    font-size: 45px;
+                }
+
                 font-weight: 200;
                 color: $main2;
                 font-size: 83px;
@@ -58,6 +71,22 @@
         }
 
         .icon {
+            @media screen and (max-width:1024px) {
+                right: 25px;
+                bottom: 15px;
+            }
+
+            @media screen and (max-width:425px) {
+                right: 15px;
+                bottom: 5px;
+                font-size: 40px;
+            }
+
+            @media screen and (max-width:375px) {
+                right: 8px;
+                bottom: 2px;
+                font-size: 35px;
+            }
 
             color: $desc4;
             position: absolute;

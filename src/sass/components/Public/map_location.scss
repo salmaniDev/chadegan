@@ -1,4 +1,8 @@
 .map_location {
+    @media screen and (max-width:768px) {
+        margin-bottom: 30px;
+    }
+
     margin-bottom: 180px;
 
     .map_title {
@@ -26,7 +30,7 @@
 
         @media screen and (max-width:425px) {
             grid-gap: 40px;
-            grid-template-columns: repeat(1, 1fr);    
+            grid-template-columns: repeat(1, 1fr);
         }
 
         display: grid;
